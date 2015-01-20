@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="tasks.xsd" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Tasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Task">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string"/><xs:element name="URL">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="actualCompletionDate" type="xs:string"/><xs:element name="actualCost" type="xs:float"/><xs:element name="actualDuration" type="xs:float"/><xs:element name="actualDurationMinutes" type="xs:byte"/><xs:element name="actualExpenseCost" type="xs:float"/><xs:element name="actualLaborCost" type="xs:float"/><xs:element name="actualRevenue" type="xs:float"/><xs:element name="actualStartDate" type="xs:string"/><xs:element name="actualWork" type="xs:float"/><xs:element name="actualWorkRequired" type="xs:byte"/><xs:element name="approvalEstStartDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="approvalPlannedStartDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="approvalProcessID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="approvalProjectedStartDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="assignedToID" type="xs:string"/><xs:element name="auditTypes">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Task" type="xs:string"/></xs:sequence></xs:complexType></xs:element><xs:element name="billingAmount" type="xs:float"/><xs:element name="billingRecordID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="categoryID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="commitDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="completionPendingDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="condition">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="constraintDate" type="xs:string"/><xs:element name="costAmount" type="xs:float"/><xs:element name="costType" type="xs:string"/><xs:element name="cpi" type="xs:float"/><xs:element name="csi" type="xs:float"/><xs:element name="currentApprovalStepID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="customerID" type="xs:string"/><xs:element name="description">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="duration" type="xs:float"/><xs:element name="durationMinutes" type="xs:short"/><xs:element name="durationType" type="xs:string"/><xs:element name="durationUnit" type="xs:string"/><xs:element name="eac" type="xs:float"/><xs:element name="enteredByID" type="xs:string"/><xs:element name="entryDate" type="xs:string"/><xs:element name="estCompletionDate" type="xs:string"/><xs:element name="estStartDate" type="xs:string"/><xs:element name="extRefID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="groupID" type="xs:string"/><xs:element name="handoffDate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="hasDocuments" type="xs:string"/><xs:element name="hasExpenses" type="xs:string"/><xs:element name="hasMessages" type="xs:string"/><xs:element name="hasNotes" type="xs:string"/><xs:element name="hasResolvables" type="xs:string"/><xs:element name="hasTimedNotifications" type="xs:string"/><xs:element name="indent" type="xs:byte"/><xs:element name="isCritical" type="xs:string"/><xs:element name="isLevelingExcluded" type="xs:string"/><xs:element name="lastConditionNoteID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="lastNoteID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="lastUpdateDate" type="xs:string"/><xs:element name="lastUpdatedByID" type="xs:string"/><xs:element name="levelingStartDelay" type="xs:float"/><xs:element name="masterTaskID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="milestoneID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="name" type="xs:string"/><xs:element name="numberOfChildren" type="xs:byte"/><xs:element name="numberOpenOpTasks" type="xs:byte"/><xs:element name="objCode" type="xs:string"/><xs:element name="originalDuration" type="xs:short"/><xs:element name="originalWorkRequired" type="xs:short"/><xs:element name="parameterValues" type="xs:string"/><xs:element name="parentID" type="xs:string"/><xs:element name="parentLag" type="xs:float"/><xs:element name="parentLagType" type="xs:string"/><xs:element name="percentComplete" type="xs:float"/><xs:element name="personal" type="xs:string"/><xs:element name="plannedCompletionDate" type="xs:string"/><xs:element name="plannedCost" type="xs:float"/><xs:element name="plannedDuration" type="xs:float"/><xs:element name="plannedDurationMinutes" type="xs:short"/><xs:element name="plannedExpenseCost" type="xs:float"/><xs:element name="plannedLaborCost" type="xs:float"/><xs:element name="plannedRevenue" type="xs:float"/><xs:element name="plannedStartDate" type="xs:string"/><xs:element name="previousStatus" type="xs:string"/><xs:element name="priority" type="xs:byte"/><xs:element name="progressStatus" type="xs:string"/><xs:element name="projectID" type="xs:string"/><xs:element name="projectedCompletionDate" type="xs:string"/><xs:element name="projectedDurationMinutes" type="xs:short"/><xs:element name="projectedStartDate" type="xs:string"/><xs:element name="recurrenceNumber">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="recurrenceRuleID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="referenceNumber" type="xs:int"/><xs:element name="rejectionIssueID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="remainingDurationMinutes" type="xs:byte"/><xs:element name="reservedTimeID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="resourceScope" type="xs:string"/><xs:element name="revenueType" type="xs:string"/><xs:element name="roleID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="slackDate" type="xs:date"/><xs:element name="spi" type="xs:float"/><xs:element name="status" type="xs:string"/><xs:element name="statusUpdate">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="submittedByID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="taskConstraint" type="xs:string"/><xs:element name="taskNumber" type="xs:byte"/><xs:element name="teamID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="templateTaskID">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="null" type="xs:string" use="optional"/></xs:extension></xs:simpleContent></xs:complexType></xs:element><xs:element name="trackingMode" type="xs:string"/><xs:element name="wbs" type="xs:string"/><xs:element name="work" type="xs:float"/><xs:element name="workRequired" type="xs:byte"/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element></xs:schema></main></document>
