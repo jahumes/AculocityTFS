@@ -34,12 +34,12 @@
         <null/>
       </entry>
       <entry>
-        <string>tlsProtocolVersion</string>
-        <string>SSL_TLSv2</string>
-      </entry>
-      <entry>
         <string>localhost</string>
         <boolean>true</boolean>
+      </entry>
+      <entry>
+        <string>tlsProtocolVersion</string>
+        <string>SSL_TLSv2</string>
       </entry>
       <entry>
         <string>certificate</string>
@@ -94,7 +94,11 @@
         <string>builtinServer</string>
       </entry>
       <entry>
-        <string>agentProperties</string>
+        <string>httpAuthType</string>
+        <string>Basic</string>
+      </entry>
+      <entry>
+        <string>http_ep_oauth_password</string>
         <null/>
       </entry>
       <entry>
@@ -102,20 +106,16 @@
         <null/>
       </entry>
       <entry>
-        <string>http_ep_oauth_password</string>
+        <string>agentProperties</string>
         <null/>
-      </entry>
-      <entry>
-        <string>httpAuthType</string>
-        <string>Basic</string>
-      </entry>
-      <entry>
-        <string>useCertificate</string>
-        <boolean>false</boolean>
       </entry>
       <entry>
         <string>proxyPort</string>
         <null/>
+      </entry>
+      <entry>
+        <string>useCertificate</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>http_ep_refreshtoken</string>
@@ -130,12 +130,12 @@
         <null/>
       </entry>
       <entry>
-        <string>runInCloudInvoke</string>
-        <boolean>false</boolean>
-      </entry>
-      <entry>
         <string>http_ep_clientid</string>
         <null/>
+      </entry>
+      <entry>
+        <string>runInCloudInvoke</string>
+        <boolean>false</boolean>
       </entry>
       <entry>
         <string>http_ep_secureconnection</string>

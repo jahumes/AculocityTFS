@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<process currentId="71" name="Main" persistenceEnabled="true" selectedActivityId="25" serialize="false" targetNamespace="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:bpel-ext="http://www.approuter.com/schemas/2003/1/bpel-ext/" xmlns:bpws="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:fn="http://www.w3.org/2002/11/xquery-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><schemas><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<process currentId="76" name="Main" persistenceEnabled="true" selectedActivityId="25" serialize="false" targetNamespace="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:bpel-ext="http://www.approuter.com/schemas/2003/1/bpel-ext/" xmlns:bpws="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:fn="http://www.w3.org/2002/11/xquery-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><schemas><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
     targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -379,7 +379,10 @@
     elementFormDefault="qualified">
     <xsd:element name="body" type="xsd:string"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription counter-for-extra-xml-schema="0" isRepositoryLocation="true" repository-url="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" schemaId="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF"/><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="FormEncodeContentType"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="FormEncodeContentType" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+]]></schemaDescription><schemaDescription counter-for-extra-xml-schema="0" isRepositoryLocation="true" repository-url="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" schemaId="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF"/><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="FormEncodeContentType"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="FormEncodeContentType" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+
+    elementFormDefault="qualified">
 
     <xsd:complexType name="HeaderItemType">
         <xsd:sequence>
@@ -390,28 +393,32 @@
 
     <xsd:complexType name="Headers">
         <xsd:sequence>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" name="headerItem" type="HeaderItemType"/>
+            <xsd:element name="headerItem" type="HeaderItemType" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
     
     <xsd:complexType name="PathParameter">
-        <xsd:sequence/>
+        <xsd:sequence>
+        </xsd:sequence>
     </xsd:complexType>
     
     <xsd:complexType name="QueryParameter">
-        <xsd:sequence><xsd:element name="fields" type="xsd:string"/><xsd:element name="status" type="xsd:string"/><xsd:element name="$$LIMIT" type="xsd:string"/><xsd:element name="sessionID" type="xsd:string"/></xsd:sequence>
+        <xsd:sequence>
+        </xsd:sequence>
     </xsd:complexType>
     
     <xsd:complexType name="HttpHeaderType">
         <xsd:sequence>
             <xsd:element name="uri" type="xsd:string"/>
-            <!-- start configurable headers --><!-- end configurable headers -->
-            <xsd:element maxOccurs="1" minOccurs="0" name="queryParameters" type="QueryParameter"/><xsd:element maxOccurs="1" minOccurs="0" name="otherHeaders" type="Headers"/>
+            <!-- start configurable headers -->
+            <!-- end configurable headers -->
+            <xsd:element name="otherHeaders" type="Headers" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     
     <xsd:element name="httpheaders" type="HttpHeaderType"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:complexType name="HeaderItemType">
         <xsd:sequence>
@@ -513,21 +520,7 @@
     elementFormDefault="qualified">
     <xsd:element name="body" type="xsd:string"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription activityId="2" counter-for-extra-xml-schema="0" schemaId="orchestration_internal_variableJobInfo"><![CDATA[<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:tns="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo"
-            targetNamespace="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" elementFormDefault="qualified">
-    <xsd:element name="JobInfo" type="tns:JobInfoType"/>
-    <xsd:complexType name="JobInfoType">
-        <xsd:sequence>
-           <xsd:element name="jobId" type="xsd:string"/>
-           <xsd:element name="jobStartTime" type="xsd:dateTime"/>
-           <xsd:element name="projectName" type="xsd:string"/>
-           <xsd:element name="configurationName" type="xsd:string"/>
-           <xsd:element name="orchestrationName" type="xsd:string"/>
-           <xsd:element name="routerHostName" type="xsd:string"/>
-        </xsd:sequence>
-     </xsd:complexType>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="Schema_4_setupWorkflowTask_in_7"><![CDATA[<?xml version="1.0" encoding="UTF-8" ?><schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="" xmlns="http://www.w3.org/2001/XMLSchema">
+]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="Schema_4_setupWorkflowTask_in_7"><![CDATA[<?xml version="1.0" encoding="UTF-8" ?><schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="" xmlns="http://www.w3.org/2001/XMLSchema">
   <element name="Json" nillable="false">
     <complexType>
       <sequence>
@@ -580,7 +573,21 @@
       </sequence>
     </complexType>
   </element>
-</schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskPassword"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskPassword" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+</schema>]]></schemaDescription><schemaDescription activityId="2" counter-for-extra-xml-schema="0" schemaId="orchestration_internal_variableJobInfo"><![CDATA[<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo"
+            targetNamespace="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" elementFormDefault="qualified">
+    <xsd:element name="JobInfo" type="tns:JobInfoType"/>
+    <xsd:complexType name="JobInfoType">
+        <xsd:sequence>
+           <xsd:element name="jobId" type="xsd:string"/>
+           <xsd:element name="jobStartTime" type="xsd:dateTime"/>
+           <xsd:element name="projectName" type="xsd:string"/>
+           <xsd:element name="configurationName" type="xsd:string"/>
+           <xsd:element name="orchestrationName" type="xsd:string"/>
+           <xsd:element name="routerHostName" type="xsd:string"/>
+        </xsd:sequence>
+     </xsd:complexType>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskPassword"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskPassword" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskSessionID"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskSessionID" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    elementFormDefault="qualified"
    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -588,7 +595,7 @@
    attributeFormDefault="unqualified">
 
    <xsd:element name="JsonText" type="xsd:string"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskSessionID"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskSessionID" type="xsd:string"/> </xsd:schema>]]></schemaDescription></schemas><dependecies><dependency id="5" projectNodeGuid="appnet-guid://7A1AD74943DBCB63F889F661A82FD5D89B23305201F142C471A619A283025E98" type="activity"/><dependency id="4" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/><dependency id="AtTaskTasks" projectNodeGuid="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" type="variable"/><dependency id="56" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/></dependecies><variables selectedVariableName="ATTaskSearchQuery"><variable assignable="false" bpel-ext:location="orchestration_internal_variableJobInfo" bpel-ext:locationType="2" bpel-ext:originalRootNode="" bpel-ext:rootNode="JobInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" canBeSubstitutedFromUI="true" internal="true" name="JobInfo" readOnly="true" typeEditable="false"><description>The orchestration creates this variable for every job. You can neither rename it nor delete it.</description></variable><variable assignable="true" bpel-ext:location="AtTaskPassword" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskPassword" bpel-ext:rootNode="AtTaskPassword" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskPassword" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>Pa55word</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskUsername" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskUsername" bpel-ext:rootNode="AtTaskUsername" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskUsername" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>marci@outboxintegrations.attask</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskLoginResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskLoginResponse" bpel-ext:rootNode="AtTaskLoginResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskLoginResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="FormEncodeContentType" bpel-ext:locationType="2" bpel-ext:originalRootNode="FormEncodeContentType" bpel-ext:rootNode="FormEncodeContentType" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="FormEncodeContentType" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>application/x-www-form-urlencoded</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskSessionID" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskSessionID" bpel-ext:rootNode="AtTaskSessionID" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskSessionID" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>NoSession</defaultValue><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultName" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultName" bpel-ext:rootNode="faultName" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultName" primitiveType="QName" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultData" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultData" bpel-ext:rootNode="faultData" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultData" primitiveType="anyType" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="FaultInfo.xsd-16" bpel-ext:locationType="2" bpel-ext:originalRootNode="FaultInfo" bpel-ext:originalRootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" bpel-ext:rootNode="FaultInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" name="faultInfo" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskSearchQuery" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskSearchQuery" bpel-ext:rootNode="ATTaskSearchQuery" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskSearchQuery" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>status=CPL&amp;$$LIMIT=5</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskResponse" bpel-ext:rootNode="ATTaskResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" bpel-ext:locationType="0" bpel-ext:originalRootNode="Tasks" bpel-ext:rootNode="Tasks" bpel-ext:sourcexpath="/Tasks" canBeSubstitutedFromUI="true" internal="false" name="AtTaskTasks" readOnly="false" typeEditable="true"><description>Variable Description</description></variable></variables><comments/><sequence activityId="2" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="Start"><start activityId="5" activityName="" comments="" configurationId="http_receiverequest_id" description="This activity listens for a request on the selected HTTP endpoint." expanded="true" moduleName="http://www.approuter.com/module/http/" name="Receive Request" partnerLink=""><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="5" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-receive-output-parameter-header.xsd-5" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="5" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-receive-output-parameter-body-string.xsd-5" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/></specInfo><doMapping/></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+</xsd:schema>]]></schemaDescription></schemas><dependecies><dependency id="5" projectNodeGuid="appnet-guid://7A1AD74943DBCB63F889F661A82FD5D89B23305201F142C471A619A283025E98" type="activity"/><dependency id="4" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/><dependency id="AtTaskTasks" projectNodeGuid="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" type="variable"/><dependency id="56" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/></dependecies><variables selectedVariableName="ATTaskSearchQuery"><variable assignable="false" bpel-ext:location="orchestration_internal_variableJobInfo" bpel-ext:locationType="2" bpel-ext:originalRootNode="" bpel-ext:rootNode="JobInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" canBeSubstitutedFromUI="true" internal="true" name="JobInfo" readOnly="true" typeEditable="false"><description>The orchestration creates this variable for every job. You can neither rename it nor delete it.</description></variable><variable assignable="true" bpel-ext:location="AtTaskPassword" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskPassword" bpel-ext:rootNode="AtTaskPassword" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskPassword" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>Pa55word</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskUsername" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskUsername" bpel-ext:rootNode="AtTaskUsername" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskUsername" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>marci@outboxintegrations.attask</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskLoginResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskLoginResponse" bpel-ext:rootNode="AtTaskLoginResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskLoginResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="FormEncodeContentType" bpel-ext:locationType="2" bpel-ext:originalRootNode="FormEncodeContentType" bpel-ext:rootNode="FormEncodeContentType" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="FormEncodeContentType" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>application/x-www-form-urlencoded</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskSessionID" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskSessionID" bpel-ext:rootNode="AtTaskSessionID" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskSessionID" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>NoSession</defaultValue><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultName" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultName" bpel-ext:rootNode="faultName" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultName" primitiveType="QName" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultData" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultData" bpel-ext:rootNode="faultData" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultData" primitiveType="anyType" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="FaultInfo.xsd-16" bpel-ext:locationType="2" bpel-ext:originalRootNode="FaultInfo" bpel-ext:originalRootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" bpel-ext:rootNode="FaultInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" name="faultInfo" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskSearchQuery" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskSearchQuery" bpel-ext:rootNode="ATTaskSearchQuery" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskSearchQuery" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>status=CPL&amp;$$LIMIT=5</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskResponse" bpel-ext:rootNode="ATTaskResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" bpel-ext:locationType="0" bpel-ext:originalRootNode="Tasks" bpel-ext:rootNode="Tasks" bpel-ext:sourcexpath="/Tasks" canBeSubstitutedFromUI="true" internal="false" name="AtTaskTasks" readOnly="false" typeEditable="true"><description>Variable Description</description></variable></variables><comments/><sequence activityId="2" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="Start"><start activityId="5" activityName="" comments="" configurationId="http_receiverequest_id" description="This activity listens for a request on the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Receive Request" partnerLink=""><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="5" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-receive-output-parameter-header.xsd-5" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="5" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-receive-output-parameter-body-string.xsd-5" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/></specInfo><doMapping/></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
       ]]><key><![CDATA[summaryTask]]></key><![CDATA[
@@ -628,12 +635,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -655,20 +662,20 @@
                 ]]><string><![CDATA[false]]></string><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_need_reply]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_receive_binary]]></string><![CDATA[
+                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_receive_path]]></string><![CDATA[
                 ]]><string/><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_receive_binary]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_receive_extrapath]]></string><![CDATA[
@@ -698,7 +705,7 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPRecieveRequstTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></start><scope activityId="8" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="false" name="AtTaskLogin"><startScope activityId="72" name="scope"><invoke activityId="4" activityName="" comments="" configurationId="http_post_id" description="This activity sends a POST request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Post Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskPassword" isParameter="false" location="AtTaskPassword" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskPassword" rootNodeName="AtTaskPassword" varName="AtTaskPassword"/><source canBeSubstitutedFromUI="true" displayName="AtTaskUsername" isParameter="false" location="AtTaskUsername" locationType="2" logicalName="srcDoc2" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskUsername" rootNodeName="AtTaskUsername" varName="AtTaskUsername"/><source canBeSubstitutedFromUI="true" displayName="FormEncodeContentType" isParameter="false" location="FormEncodeContentType" locationType="2" logicalName="srcDoc3" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="FormEncodeContentType" rootNodeName="FormEncodeContentType" varName="FormEncodeContentType"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-4" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-4" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-4" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="Concatenate" gridX="87" gridY="87" id="1" resultType="xsd:string"><arg dataType="xsd:string"><constant>username=</constant></arg><arg dataType="xsd:string" docName="srcDoc2"><path>/AtTaskUsername</path></arg><arg dataType="xsd:string"><constant>&amp;password=</constant></arg><arg dataType="xsd:string" docName="srcDoc1"><path>/AtTaskPassword</path></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="3" id="0" srcDocName="srcDoc1" srcPath="/AtTaskPassword"/><link destDocName="dstDoc2" destPath="/body" id="1" srcFunctoid="1"/><link destFunctoid="1" destFunctoidArgIndex="1" id="2" srcDocName="srcDoc2" srcPath="/AtTaskUsername"/></call></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc3" path="/FormEncodeContentType"/><to docName="dstDoc1" path="/httpheaders/Content-Type"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-4" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-4" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-4" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-4" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/AtTaskLoginResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></start><scope activityId="8" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="false" name="AtTaskLogin"><startScope activityId="77" name="scope"><invoke activityId="4" activityName="" comments="" configurationId="http_post_id" description="This activity sends a POST request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Post Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskPassword" isParameter="false" location="AtTaskPassword" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskPassword" rootNodeName="AtTaskPassword" varName="AtTaskPassword"/><source canBeSubstitutedFromUI="true" displayName="AtTaskUsername" isParameter="false" location="AtTaskUsername" locationType="2" logicalName="srcDoc2" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskUsername" rootNodeName="AtTaskUsername" varName="AtTaskUsername"/><source canBeSubstitutedFromUI="true" displayName="FormEncodeContentType" isParameter="false" location="FormEncodeContentType" locationType="2" logicalName="srcDoc3" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="FormEncodeContentType" rootNodeName="FormEncodeContentType" varName="FormEncodeContentType"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-4" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-4" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-4" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="Concatenate" gridX="87" gridY="87" id="1" resultType="xsd:string"><arg dataType="xsd:string"><constant>username=</constant></arg><arg dataType="xsd:string" docName="srcDoc2"><path>/AtTaskUsername</path></arg><arg dataType="xsd:string"><constant>&amp;password=</constant></arg><arg dataType="xsd:string" docName="srcDoc1"><path>/AtTaskPassword</path></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="3" id="0" srcDocName="srcDoc1" srcPath="/AtTaskPassword"/><link destDocName="dstDoc2" destPath="/body" id="1" srcFunctoid="1"/><link destFunctoid="1" destFunctoidArgIndex="1" id="2" srcDocName="srcDoc2" srcPath="/AtTaskUsername"/></call></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc3" path="/FormEncodeContentType"/><to docName="dstDoc1" path="/httpheaders/Content-Type"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-4" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-4" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-4" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-4" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/AtTaskLoginResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
       ]]><key><![CDATA[summaryTask]]></key><![CDATA[
@@ -738,12 +745,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
                     ]]><string><![CDATA[customHeaders]]></string><![CDATA[
@@ -769,12 +776,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -786,20 +793,20 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
-                    ]]><int><![CDATA[5]]></int><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[timeout]]></string><![CDATA[
-                    ]]><int><![CDATA[300]]></int><![CDATA[
+                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
+                    ]]><int><![CDATA[5]]></int><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
                     ]]><string><![CDATA[retryInterval]]></string><![CDATA[
                     ]]><int><![CDATA[30]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[timeout]]></string><![CDATA[
+                    ]]><int><![CDATA[300]]></int><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -825,11 +832,11 @@
                 ]]><boolean><![CDATA[true]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
+                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
+                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
             ]]></map><![CDATA[
@@ -882,40 +889,40 @@
             ]]><string><![CDATA[Json]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
-            ]]><int><![CDATA[1]]></int><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
             ]]><string><![CDATA[{"data":{"userID":"f1da528fcbc67471e0433365290aabff","sessionID":"0a651dfbaffa43788d541dcd9459f1dc","versionInformation":{"currentAPI":"v4.0","buildNumber":"8284eae9cfb380345e1c8f33d0a0604b6a18853c","apiVersions":{"v1.0":"\/attask\/api\/v1.0\/","v2.0":"\/attask\/api\/v2.0\/","v3.0":"\/attask\/api\/v3.0\/","v4.0":"\/attask\/api\/v4.0\/"},"lastUpdated":"2015\/01\/05 13:23:13","release":"R16","version":"4.0"},"locale":"en_US","timeZone":"US\/Mountain","timeZoneName":"Mountain Standard Time","iso3Country":"USA","iso3Language":"eng","currency":{"useNegativeSign":false,"fractionDigits":2,"symbol":"$","ID":"USD","groupingSeparator":",","decimalSeparator":"."}}}]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
-            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
+            ]]><int><![CDATA[1]]></int><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
             ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
+            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeArray]]></string><![CDATA[
             ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
-            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
+            ]]><string/><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoding]]></string><![CDATA[
             ]]><string><![CDATA[ISO-8859-1]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
-            ]]><string/><![CDATA[
+            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoded]]></string><![CDATA[
@@ -956,7 +963,7 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.task.ActivityRefTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope><catchAll activityId="16" comments="" configurationId="flow_catchAll_id_1" description="Catch All Activity" expanded="true" faultInfo="faultInfo" faultName="faultName" faultVariable="faultData" name="CatchAll"><sequence activityId="73" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="sequence"><empty activityId="17" comments="" configurationId="flow_empty_id_1" description="Empty Activity" expanded="true" name="Empty"/></sequence></catchAll></scope><scope activityId="18" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="true" name="AtTaskGetTasks"><startScope activityId="74" name="scope"><invoke activityId="56" activityName="" comments="" configurationId="http_get_id" description="This activity sends a GET request to the selected HTTP endpoint." expanded="true" moduleName="http://www.approuter.com/module/http/" name="Get Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskSessionID" isParameter="false" location="AtTaskSessionID" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskSessionID" rootNodeName="AtTaskSessionID" varName="AtTaskSessionID"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-56" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-56" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-56" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/AtTaskSessionID"/><to docName="dstDoc1" path="/httpheaders/queryParameters/sessionID"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-56" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-56" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-56" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-56" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/ATTaskResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope><catchAll activityId="16" comments="" configurationId="flow_catchAll_id_1" description="Catch All Activity" expanded="true" faultInfo="faultInfo" faultName="faultName" faultVariable="faultData" name="CatchAll"><sequence activityId="78" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="sequence"><empty activityId="17" comments="" configurationId="flow_empty_id_1" description="Empty Activity" expanded="true" name="Empty"/></sequence></catchAll></scope><scope activityId="18" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="true" name="AtTaskGetTasks"><startScope activityId="79" name="scope"><invoke activityId="56" activityName="" comments="" configurationId="http_get_id" description="This activity sends a GET request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Get Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-56" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-56" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-56" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping/></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-56" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-56" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-56" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-56" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/ATTaskResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
       ]]><key><![CDATA[summaryTask]]></key><![CDATA[
@@ -996,12 +1003,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -1013,12 +1020,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -1030,20 +1037,20 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
-                    ]]><int><![CDATA[5]]></int><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[selected]]></string><![CDATA[
                     ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[timeout]]></string><![CDATA[
-                    ]]><int><![CDATA[300]]></int><![CDATA[
+                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
+                    ]]><int><![CDATA[5]]></int><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
                     ]]><string><![CDATA[retryInterval]]></string><![CDATA[
                     ]]><int><![CDATA[30]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[timeout]]></string><![CDATA[
+                    ]]><int><![CDATA[300]]></int><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -1069,11 +1076,11 @@
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
+                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
+                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
             ]]></map><![CDATA[
@@ -1126,8 +1133,8 @@
             ]]><string><![CDATA[Json]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
-            ]]><int><![CDATA[1]]></int><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
@@ -1709,32 +1716,32 @@
 }]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
-            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
+            ]]><int><![CDATA[1]]></int><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
             ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
+            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeArray]]></string><![CDATA[
             ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
-            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
+            ]]><string/><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoding]]></string><![CDATA[
             ]]><string><![CDATA[ISO-8859-1]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
-            ]]><string/><![CDATA[
+            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoded]]></string><![CDATA[
