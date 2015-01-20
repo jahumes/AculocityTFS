@@ -1,9 +1,16 @@
 <com.approuter.studio.repository.model.EntryMetaData>
   <__metaData>
-    <properties/>
+    <properties>
+      <entry>
+        <string>variables</string>
+        <list>
+          <string>AtTaskTasks</string>
+        </list>
+      </entry>
+    </properties>
   </__metaData>
   <__namespace>http://www.approuter.com/schemas/2003/1/xmlschema/</__namespace>
   <__valid>true</__valid>
   <__hidden>false</__hidden>
-  <__guid>0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF</__guid>
+  <__guid>26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47</__guid>
 </com.approuter.studio.repository.model.EntryMetaData>

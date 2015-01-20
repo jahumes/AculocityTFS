@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document><main name="ATTasks.xsd" type="http://www.approuter.com/schemas/2003/1/xmlschema/"><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AtTaskTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Task">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DE-TFS_Project" type="xs:string"/><xs:element name="ID" type="xs:string"/><xs:element name="categoryID" type="xs:string"/><xs:element name="name" type="xs:string"/><xs:element name="objCode" type="xs:string"/></xs:sequence></xs:complexType></xs:element></xs:sequence></xs:complexType></xs:element></xs:schema></main></document>

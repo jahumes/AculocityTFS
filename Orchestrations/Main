@@ -1,83 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<process currentId="76" name="Main" persistenceEnabled="true" selectedActivityId="25" serialize="false" targetNamespace="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:bpel-ext="http://www.approuter.com/schemas/2003/1/bpel-ext/" xmlns:bpws="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:fn="http://www.w3.org/2002/11/xquery-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><schemas><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified">
-    <xsd:element name="body" type="xsd:string"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="faultData"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="faultData" type="xsd:anyType"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskUsername"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskUsername" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="5" counter-for-extra-xml-schema="0" schemaId="http-receive-output-parameter-body-string.xsd-5"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified">
-    <xsd:element name="body" type="xsd:string"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-connection.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+<process currentId="279" name="Main" persistenceEnabled="true" selectedActivityId="251" serialize="false" targetNamespace="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:bpel-ext="http://www.approuter.com/schemas/2003/1/bpel-ext/" xmlns:bpws="http://www.approuter.com/schemas/2004/01/maestro/process/" xmlns:fn="http://www.w3.org/2002/11/xquery-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><schemas><schemaDescription activityId="119" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-encoding.xsd-119"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified"
+   targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+   xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+   attributeFormDefault="unqualified">
+    
+   <xsd:element name="Encoding" type="xsd:string"/>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-            elementFormDefault="qualified">
-    <xsd:complexType name="HttpConnParameterDetails">
+    <xsd:complexType name="HeaderItemType">
         <xsd:sequence>
-            <xsd:element name="host" type="xsd:string"/>
-            <xsd:element name="port" type="xsd:string"/>
-            <xsd:element name="isSecure" type="xsd:boolean"
-                minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="username" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="password" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-           
-            <xsd:element name="proxy" type="ProxyDetails" minOccurs='0'/>    
-            <xsd:element name="oauth" type="OAuthDetails" minOccurs="0"/>       
-         </xsd:sequence>
-            <xsd:attribute name="timeout" type="xsd:string" default="300" /> 
-          <xsd:attribute name="domain" type="xsd:string"/>
-    </xsd:complexType>
-    <xsd:complexType name="ProxyDetails">
-        <xsd:sequence>
-            <xsd:element name="host" type="xsd:string"/>
-            <xsd:element name="port" type="xsd:string"/>
-            <xsd:element name="username" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="password" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-		
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="value" type="xsd:string"/>
         </xsd:sequence>
-	<xsd:attribute name="domain" type="xsd:string"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="Headers">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="headerItem" type="HeaderItemType"/>
+        </xsd:sequence>
     </xsd:complexType>
     
-    <xsd:complexType name="OAuthDetails">
+    <xsd:complexType name="PathParameter">
+        <xsd:sequence/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="QueryParameter">
+        <xsd:sequence><xsd:element name="method" type="xsd:string"/><xsd:element name="sessionID" type="xsd:string"/></xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="HttpHeaderType">
         <xsd:sequence>
-            <xsd:element name="grantType" type="xsd:string"/>
-            <xsd:element name="clientId" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="clientSecret" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="refreshToken" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="accessToken" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="authenticationUrl" type="xsd:string" minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="scope" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="username" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-            <xsd:element name="password" type="xsd:string"
-                minOccurs="0" maxOccurs="1"/>
-
+            <xsd:element name="uri" type="xsd:string"/>
+            <!-- start configurable headers --><xsd:element name="Content-Type" type="xsd:string"/><!-- end configurable headers -->
+            <xsd:element maxOccurs="1" minOccurs="0" name="queryParameters" type="QueryParameter"/><xsd:element maxOccurs="1" minOccurs="0" name="otherHeaders" type="Headers"/>
         </xsd:sequence>
     </xsd:complexType>
-
-   <xsd:element name="httpConnParameter" type="HttpConnParameterDetails"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsecode-int.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified">
-    <xsd:element name="responsecode" type="xsd:int"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-output-parameter-header.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+    
+    <xsd:element name="httpheaders" type="HttpHeaderType"/>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-output-parameter-header.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 
     elementFormDefault="qualified">
@@ -115,15 +77,7 @@
     
     <xsd:element name="httpheaders" type="HttpHeaderType"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsemessage-string.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    elementFormDefault="qualified">
-    <xsd:element name="responsemessage" type="xsd:string"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="25" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-25"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="faultData"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="faultData" type="xsd:anyType"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="119" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-119"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    elementFormDefault="qualified"
    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -131,129 +85,23 @@
    attributeFormDefault="unqualified">
 
    <xsd:element name="JsonText" type="xsd:string"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskLoginResponse"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskLoginResponse" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="25" counter-for-extra-xml-schema="0" schemaId="Schema_4_setupWorkflowTask_in_25"><![CDATA[<?xml version="1.0" encoding="UTF-8" ?><schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="" xmlns="http://www.w3.org/2001/XMLSchema">
-  <element name="Json" nillable="false">
-    <complexType>
-      <sequence>
-        <element name="data" nillable="false" minOccurs="0" maxOccurs="unbounded">
-          <complexType>
-            <sequence>
-              <element name="ID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="name" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="objCode" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="URL" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="actualCompletionDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="actualCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualDuration" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualDurationMinutes" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualExpenseCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualLaborCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualRevenue" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualStartDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="actualWork" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="actualWorkRequired" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="approvalEstStartDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="approvalPlannedStartDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="approvalProcessID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="approvalProjectedStartDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="assignedToID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="auditTypes" nillable="false" minOccurs="0" maxOccurs="unbounded" type="string"/>
-              <element name="billingAmount" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="billingRecordID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="categoryID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="commitDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="completionPendingDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="condition" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="constraintDate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="costAmount" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="costType" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="cpi" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="csi" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="currentApprovalStepID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="customerID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="description" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="duration" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="durationMinutes" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="durationType" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="durationUnit" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="eac" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="enteredByID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="entryDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="estCompletionDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="estStartDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="extRefID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="groupID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="handoffDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="hasDocuments" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="hasExpenses" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="hasMessages" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="hasNotes" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="hasResolvables" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="hasTimedNotifications" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="indent" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="isCritical" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="isLevelingExcluded" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="lastConditionNoteID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="lastNoteID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="lastUpdateDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="lastUpdatedByID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="levelingStartDelay" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="masterTaskID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="milestoneID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="numberOfChildren" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="numberOpenOpTasks" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="originalDuration" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="originalWorkRequired" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="parentID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="parentLag" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="parentLagType" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="percentComplete" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="personal" nillable="false" minOccurs="0" maxOccurs="1" type="boolean"/>
-              <element name="plannedCompletionDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="plannedCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedDuration" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedDurationMinutes" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedExpenseCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedLaborCost" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedRevenue" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="plannedStartDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="previousStatus" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="priority" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="progressStatus" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="projectID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="projectedCompletionDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="projectedDurationMinutes" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="projectedStartDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="recurrenceNumber" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="recurrenceRuleID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="referenceNumber" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="rejectionIssueID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="remainingDurationMinutes" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="reservedTimeID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="resourceScope" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="revenueType" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="roleID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="slackDate" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="spi" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="status" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="statusUpdate" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="submittedByID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="taskConstraint" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="taskNumber" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="teamID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="templateTaskID" nillable="true" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="trackingMode" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="wbs" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-              <element name="work" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="workRequired" nillable="false" minOccurs="0" maxOccurs="1" type="double"/>
-              <element name="parameterValues" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
-            </sequence>
-          </complexType>
-        </element>
-      </sequence>
-    </complexType>
-  </element>
-</schema>]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-connection.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskUsername"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskUsername" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="5" counter-for-extra-xml-schema="0" schemaId="http-receive-output-parameter-body-string.xsd-5"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="body" type="xsd:string"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsecode-int.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="responsecode" type="xsd:int"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="loopcounter_1"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="loopcounter_1" type="xsd:int"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-connection.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 
             elementFormDefault="qualified">
@@ -307,7 +155,7 @@
 
    <xsd:element name="httpConnParameter" type="HttpConnParameterDetails"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="ATTaskSearchQuery"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="ATTaskSearchQuery" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsemessage-string.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskSessionID_1"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskSessionID_1" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="SomeResponse"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="SomeResponse" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsemessage-string.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
     targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -315,7 +163,15 @@
     elementFormDefault="qualified">
     <xsd:element name="responsemessage" type="xsd:string"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsecode-int.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskLoginResponse"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskLoginResponse" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="HTTP_GET"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="HTTP_GET" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsemessage-string.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="responsemessage" type="xsd:string"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="ATTaskSearchQuery"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="ATTaskSearchQuery" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-responsecode-int.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
     targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -323,6 +179,20 @@
     elementFormDefault="qualified">
     <xsd:element name="responsecode" type="xsd:int"/>
 </xsd:schema>
+]]></schemaDescription><schemaDescription activityId="205" counter-for-extra-xml-schema="0" schemaId="writejson-input-param.xsd-205"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified"
+   targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+   xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+   attributeFormDefault="unqualified">
+   
+   <xsd:element name="JsonXml" type="xsd:anyType"/>
+   <xsd:element name="DocTypeSystem" type="xsd:string"/>
+   <xsd:element name="DocTypePublic" type="xsd:string"/>
+   <xsd:element name="OmitXmlDecl" type="xsd:boolean"/>
+   <xsd:element name="Encoding" type="xsd:string"/>
+</xsd:schema>
+
 ]]></schemaDescription><schemaDescription activityId="16" counter-for-extra-xml-schema="0" schemaId="FaultInfo.xsd-16"><![CDATA[<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:tns="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo"
             targetNamespace="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" elementFormDefault="qualified">
@@ -337,7 +207,31 @@
         </xsd:sequence>
      </xsd:complexType>
 </xsd:schema>
-]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="ATTaskResponse"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="ATTaskResponse" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="5" counter-for-extra-xml-schema="0" schemaId="http-receive-output-parameter-header.xsd-5"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+]]></schemaDescription><schemaDescription activityId="251" counter-for-extra-xml-schema="0" schemaId="http-reply-input-parameter-body-string.xsd-251"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="body" type="xsd:string"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-body-string.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="body" type="xsd:string"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="251" counter-for-extra-xml-schema="0" schemaId="http-reply-input-parameter-responsecode-int.xsd-251"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="responsecode" type="xsd:int"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="ATTaskResponse"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="ATTaskResponse" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="faultName"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="faultName" type="xsd:QName"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="5" counter-for-extra-xml-schema="0" schemaId="http-receive-output-parameter-header.xsd-5"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:complexType name="HeaderItemType">
         <xsd:sequence>
@@ -371,7 +265,7 @@
     </xsd:complexType>
     
     <xsd:element name="httpheaders" type="HttpHeaderType"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="faultName"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="faultName" type="xsd:QName"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
     targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -379,7 +273,40 @@
     elementFormDefault="qualified">
     <xsd:element name="body" type="xsd:string"/>
 </xsd:schema>
-]]></schemaDescription><schemaDescription counter-for-extra-xml-schema="0" isRepositoryLocation="true" repository-url="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" schemaId="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF"/><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="FormEncodeContentType"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="FormEncodeContentType" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+]]></schemaDescription><schemaDescription activityId="119" counter-for-extra-xml-schema="0" schemaId="Schema_4_setupWorkflowTask_in_119"><![CDATA[<?xml version="1.0" encoding="UTF-8" ?><schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="Json" nillable="false">
+    <complexType>
+      <sequence>
+        <element name="data" nillable="false" minOccurs="0" maxOccurs="unbounded">
+          <complexType>
+            <sequence>
+              <element name="ID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
+              <element name="name" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
+              <element name="objCode" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
+              <element name="categoryID" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
+              <element name="DE-TFS_Project" nillable="false" minOccurs="0" maxOccurs="1" type="string"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="FormEncodeContentType"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="FormEncodeContentType" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="251" counter-for-extra-xml-schema="0" schemaId="http-reply-input-parameter-header.xsd-251"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- @start_prolog@ -->
+<!-- ============================================================================ -->
+<!-- IBM Confidential OCO Source Materials  -->
+<!--  -->
+<!-- 9235-8CX, 9235-8DX, 9235-8FX, 9235-8GX, 9235-8HX, 9235-8JX, 7198-8FX, 5725-C11, 5725-C12, 5725-C16, 5725-C17, 5725-L30  -->
+<!--  -->
+<!-- Â© Copyright IBM Corporation 2013 -->
+<!--  -->
+<!-- The source code for this program is not published or otherwise divested -->
+<!-- of its trade secrets, irrespective of what has been deposited with the -->
+<!-- U.S. Copyright Office. -->
+<!-- ============================================================================ -->
+<!-- @end_prolog@ -->
+
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 
     elementFormDefault="qualified">
@@ -410,15 +337,15 @@
     <xsd:complexType name="HttpHeaderType">
         <xsd:sequence>
             <xsd:element name="uri" type="xsd:string"/>
-            <!-- start configurable headers -->
-            <!-- end configurable headers -->
+            <xsd:element name="method" type="xsd:string"/>
+			<xsd:element name="Via" type="xsd:string"/>
+            <!-- start configurable headers --><!-- end configurable headers -->
             <xsd:element name="otherHeaders" type="Headers" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     
     <xsd:element name="httpheaders" type="HttpHeaderType"/>
-</xsd:schema>
-]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-input-parameter-header.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:complexType name="HeaderItemType">
         <xsd:sequence>
@@ -450,29 +377,36 @@
     </xsd:complexType>
     
     <xsd:element name="httpheaders" type="HttpHeaderType"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-encoding.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="205" counter-for-extra-xml-schema="0" schemaId="writejson-output-param-string.xsd-205"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    elementFormDefault="qualified"
    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
    attributeFormDefault="unqualified">
-    
-   <xsd:element name="Encoding" type="xsd:string"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="25" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-encoding.xsd-25"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-   elementFormDefault="qualified"
-   targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
-   xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
-   attributeFormDefault="unqualified">
-    
-   <xsd:element name="Encoding" type="xsd:string"/>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="56" counter-for-extra-xml-schema="0" schemaId="http-request-output-parameter-body-string.xsd-56"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+   <xsd:element name="JsonText" type="xsd:string"/>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-body-string.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
     targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified">
     <xsd:element name="body" type="xsd:string"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-encoding.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified"
+   targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+   xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+   attributeFormDefault="unqualified">
+    
+   <xsd:element name="Encoding" type="xsd:string"/>
+</xsd:schema>]]></schemaDescription><schemaDescription counter-for-extra-xml-schema="0" isRepositoryLocation="true" repository-url="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" schemaId="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47"/><schemaDescription activityId="251" counter-for-extra-xml-schema="0" schemaId="http-reply-input-parameter-responsemessage-string.xsd-251"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xsd:element name="responsemessage" type="xsd:string"/>
 </xsd:schema>
 ]]></schemaDescription><schemaDescription activityId="4" counter-for-extra-xml-schema="0" schemaId="http-method-specific-request-output-parameter-header.xsd-4"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -587,7 +521,61 @@
            <xsd:element name="routerHostName" type="xsd:string"/>
         </xsd:sequence>
      </xsd:complexType>
-</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskPassword"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskPassword" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskSessionID"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskSessionID" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskPassword"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskPassword" type="xsd:string"/> </xsd:schema>]]></schemaDescription><schemaDescription activityId="121" counter-for-extra-xml-schema="0" schemaId="http-request-input-parameter-connection.xsd-121"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+
+            elementFormDefault="qualified">
+    <xsd:complexType name="HttpConnParameterDetails">
+        <xsd:sequence>
+            <xsd:element name="host" type="xsd:string"/>
+            <xsd:element name="port" type="xsd:string"/>
+            <xsd:element name="isSecure" type="xsd:boolean"
+                minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="username" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="password" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+           
+            <xsd:element name="proxy" type="ProxyDetails" minOccurs='0'/>    
+            <xsd:element name="oauth" type="OAuthDetails" minOccurs="0"/>       
+         </xsd:sequence>
+            <xsd:attribute name="timeout" type="xsd:string" default="300" /> 
+          <xsd:attribute name="domain" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ProxyDetails">
+        <xsd:sequence>
+            <xsd:element name="host" type="xsd:string"/>
+            <xsd:element name="port" type="xsd:string"/>
+            <xsd:element name="username" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="password" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+		
+        </xsd:sequence>
+	<xsd:attribute name="domain" type="xsd:string"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="OAuthDetails">
+        <xsd:sequence>
+            <xsd:element name="grantType" type="xsd:string"/>
+            <xsd:element name="clientId" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="clientSecret" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="refreshToken" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="accessToken" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="authenticationUrl" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="scope" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="username" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="password" type="xsd:string"
+                minOccurs="0" maxOccurs="1"/>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+   <xsd:element name="httpConnParameter" type="HttpConnParameterDetails"/>
+</xsd:schema>
+]]></schemaDescription><schemaDescription activityId="7" counter-for-extra-xml-schema="0" schemaId="readjson-input-param-string.xsd-7"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
    elementFormDefault="qualified"
    targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes"
@@ -595,7 +583,7 @@
    attributeFormDefault="unqualified">
 
    <xsd:element name="JsonText" type="xsd:string"/>
-</xsd:schema>]]></schemaDescription></schemas><dependecies><dependency id="5" projectNodeGuid="appnet-guid://7A1AD74943DBCB63F889F661A82FD5D89B23305201F142C471A619A283025E98" type="activity"/><dependency id="4" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/><dependency id="AtTaskTasks" projectNodeGuid="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" type="variable"/><dependency id="56" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/></dependecies><variables selectedVariableName="ATTaskSearchQuery"><variable assignable="false" bpel-ext:location="orchestration_internal_variableJobInfo" bpel-ext:locationType="2" bpel-ext:originalRootNode="" bpel-ext:rootNode="JobInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" canBeSubstitutedFromUI="true" internal="true" name="JobInfo" readOnly="true" typeEditable="false"><description>The orchestration creates this variable for every job. You can neither rename it nor delete it.</description></variable><variable assignable="true" bpel-ext:location="AtTaskPassword" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskPassword" bpel-ext:rootNode="AtTaskPassword" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskPassword" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>Pa55word</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskUsername" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskUsername" bpel-ext:rootNode="AtTaskUsername" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskUsername" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>marci@outboxintegrations.attask</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskLoginResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskLoginResponse" bpel-ext:rootNode="AtTaskLoginResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskLoginResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="FormEncodeContentType" bpel-ext:locationType="2" bpel-ext:originalRootNode="FormEncodeContentType" bpel-ext:rootNode="FormEncodeContentType" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="FormEncodeContentType" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>application/x-www-form-urlencoded</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskSessionID" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskSessionID" bpel-ext:rootNode="AtTaskSessionID" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskSessionID" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>NoSession</defaultValue><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultName" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultName" bpel-ext:rootNode="faultName" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultName" primitiveType="QName" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultData" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultData" bpel-ext:rootNode="faultData" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultData" primitiveType="anyType" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="FaultInfo.xsd-16" bpel-ext:locationType="2" bpel-ext:originalRootNode="FaultInfo" bpel-ext:originalRootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" bpel-ext:rootNode="FaultInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" name="faultInfo" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskSearchQuery" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskSearchQuery" bpel-ext:rootNode="ATTaskSearchQuery" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskSearchQuery" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>status=CPL&amp;$$LIMIT=5</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskResponse" bpel-ext:rootNode="ATTaskResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" bpel-ext:locationType="0" bpel-ext:originalRootNode="Tasks" bpel-ext:rootNode="Tasks" bpel-ext:sourcexpath="/Tasks" canBeSubstitutedFromUI="true" internal="false" name="AtTaskTasks" readOnly="false" typeEditable="true"><description>Variable Description</description></variable></variables><comments/><sequence activityId="2" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="Start"><start activityId="5" activityName="" comments="" configurationId="http_receiverequest_id" description="This activity listens for a request on the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Receive Request" partnerLink=""><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="5" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-receive-output-parameter-header.xsd-5" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="5" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-receive-output-parameter-body-string.xsd-5" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/></specInfo><doMapping/></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+</xsd:schema>]]></schemaDescription><schemaDescription activityId="" counter-for-extra-xml-schema="0" schemaId="AtTaskSessionID"><![CDATA[<xsd:schema targetNamespace="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns:tns="http://www.approuter.com/schemas/2003/1/castirontypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> <xsd:element name="AtTaskSessionID" type="xsd:string"/> </xsd:schema>]]></schemaDescription></schemas><dependecies><dependency id="5" projectNodeGuid="appnet-guid://7A1AD74943DBCB63F889F661A82FD5D89B23305201F142C471A619A283025E98" type="activity"/><dependency id="4" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/><dependency id="121" projectNodeGuid="appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828" type="activity"/><dependency id="ATTasks" projectNodeGuid="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" type="variable"/><dependency id="205" projectNodeGuid="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" type="activity"/></dependecies><variables selectedVariableName="SomeResponse"><variable assignable="false" bpel-ext:location="orchestration_internal_variableJobInfo" bpel-ext:locationType="2" bpel-ext:originalRootNode="" bpel-ext:rootNode="JobInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2005/1/orchestration/jobinfo" canBeSubstitutedFromUI="true" internal="true" name="JobInfo" readOnly="true" typeEditable="false"><description>The orchestration creates this variable for every job. You can neither rename it nor delete it.</description></variable><variable assignable="true" bpel-ext:location="AtTaskPassword" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskPassword" bpel-ext:rootNode="AtTaskPassword" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskPassword" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>Pa55word</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskUsername" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskUsername" bpel-ext:rootNode="AtTaskUsername" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskUsername" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>marci@outboxintegrations.attask</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskLoginResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskLoginResponse" bpel-ext:rootNode="AtTaskLoginResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskLoginResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="FormEncodeContentType" bpel-ext:locationType="2" bpel-ext:originalRootNode="FormEncodeContentType" bpel-ext:rootNode="FormEncodeContentType" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="FormEncodeContentType" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>application/x-www-form-urlencoded</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskSessionID" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskSessionID" bpel-ext:rootNode="AtTaskSessionID" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskSessionID" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>NoSession</defaultValue><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultName" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultName" bpel-ext:rootNode="faultName" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultName" primitiveType="QName" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="faultData" bpel-ext:locationType="2" bpel-ext:originalRootNode="faultData" bpel-ext:rootNode="faultData" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" isPrimitiveType="true" name="faultData" primitiveType="anyType" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="FaultInfo.xsd-16" bpel-ext:locationType="2" bpel-ext:originalRootNode="FaultInfo" bpel-ext:originalRootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" bpel-ext:rootNode="FaultInfo" bpel-ext:rootNodeNS="http://www.approuter.com/schemas/2006/1/orchestration/faultinfo" canBeSubstitutedFromUI="true" canSetDefaultValueProperty="false" canSetSharedProperty="false" internal="false" name="faultInfo" readOnly="false" scopeActivityId="8" typeEditable="false"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskSearchQuery" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskSearchQuery" bpel-ext:rootNode="ATTaskSearchQuery" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskSearchQuery" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>fields=name,categoryID,DE:TFS Project&amp;categoryID=54be9a79000029810f69033123cc05d7</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="ATTaskResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="ATTaskResponse" bpel-ext:rootNode="ATTaskResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="ATTaskResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="HTTP_GET" bpel-ext:locationType="2" bpel-ext:originalRootNode="HTTP_GET" bpel-ext:rootNode="HTTP_GET" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="HTTP_GET" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>GET</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="AtTaskSessionID_1" bpel-ext:locationType="2" bpel-ext:originalRootNode="AtTaskSessionID_1" bpel-ext:rootNode="AtTaskSessionID_1" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="AtTaskSessionID_1" primitiveType="string" readOnly="false" typeEditable="true"><defaultValue>NoSession</defaultValue><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" bpel-ext:locationType="0" bpel-ext:originalRootNode="AtTaskTasks" bpel-ext:rootNode="AtTaskTasks" canBeSubstitutedFromUI="true" internal="false" name="ATTasks" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="loopcounter_1" bpel-ext:locationType="2" bpel-ext:originalRootNode="loopcounter_1" bpel-ext:rootNode="loopcounter_1" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="loopcounter_1" primitiveType="int" readOnly="false" typeEditable="false"><description>Variable Description</description></variable><variable assignable="false" bpel-ext:location="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" bpel-ext:locationType="0" bpel-ext:originalRootNode="AtTaskTasks" bpel-ext:rootNode="Task" bpel-ext:sourcexpath="/AtTaskTasks/Task" canBeSubstitutedFromUI="true" internal="false" name="ATTask" readOnly="false" typeEditable="true"><description>Variable Description</description></variable><variable assignable="true" bpel-ext:location="SomeResponse" bpel-ext:locationType="2" bpel-ext:originalRootNode="SomeResponse" bpel-ext:rootNode="SomeResponse" canBeSubstitutedFromUI="true" internal="false" isPrimitiveType="true" name="SomeResponse" primitiveType="string" readOnly="false" typeEditable="true"><description>Variable Description</description></variable></variables><comments/><sequence activityId="2" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="Start"><start activityId="5" activityName="" comments="" configurationId="http_receiverequest_id" description="This activity listens for a request on the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Receive Request" partnerLink=""><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="5" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-receive-output-parameter-header.xsd-5" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="5" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-receive-output-parameter-body-string.xsd-5" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/></specInfo><doMapping/></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
       ]]><key><![CDATA[summaryTask]]></key><![CDATA[
@@ -635,12 +623,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
                     ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -655,27 +643,27 @@
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_receive_accept_method]]></string><![CDATA[
-                ]]><string><![CDATA[ALL]]></string><![CDATA[
+                ]]><string><![CDATA[GET]]></string><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[selected]]></string><![CDATA[
                 ]]><string><![CDATA[false]]></string><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_need_reply]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
+                ]]><string><![CDATA[http_receive_binary]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_receive_path]]></string><![CDATA[
                 ]]><string/><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_receive_binary]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_receive_extrapath]]></string><![CDATA[
@@ -705,7 +693,7 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPRecieveRequstTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></start><scope activityId="8" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="false" name="AtTaskLogin"><startScope activityId="77" name="scope"><invoke activityId="4" activityName="" comments="" configurationId="http_post_id" description="This activity sends a POST request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Post Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskPassword" isParameter="false" location="AtTaskPassword" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskPassword" rootNodeName="AtTaskPassword" varName="AtTaskPassword"/><source canBeSubstitutedFromUI="true" displayName="AtTaskUsername" isParameter="false" location="AtTaskUsername" locationType="2" logicalName="srcDoc2" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskUsername" rootNodeName="AtTaskUsername" varName="AtTaskUsername"/><source canBeSubstitutedFromUI="true" displayName="FormEncodeContentType" isParameter="false" location="FormEncodeContentType" locationType="2" logicalName="srcDoc3" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="FormEncodeContentType" rootNodeName="FormEncodeContentType" varName="FormEncodeContentType"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-4" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-4" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-4" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="Concatenate" gridX="87" gridY="87" id="1" resultType="xsd:string"><arg dataType="xsd:string"><constant>username=</constant></arg><arg dataType="xsd:string" docName="srcDoc2"><path>/AtTaskUsername</path></arg><arg dataType="xsd:string"><constant>&amp;password=</constant></arg><arg dataType="xsd:string" docName="srcDoc1"><path>/AtTaskPassword</path></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="3" id="0" srcDocName="srcDoc1" srcPath="/AtTaskPassword"/><link destDocName="dstDoc2" destPath="/body" id="1" srcFunctoid="1"/><link destFunctoid="1" destFunctoidArgIndex="1" id="2" srcDocName="srcDoc2" srcPath="/AtTaskUsername"/></call></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc3" path="/FormEncodeContentType"/><to docName="dstDoc1" path="/httpheaders/Content-Type"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-4" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-4" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-4" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-4" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/AtTaskLoginResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></start><scope activityId="8" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="true" name="AtTaskLogin"><startScope activityId="280" name="scope"><invoke activityId="4" activityName="" comments="" configurationId="http_post_id" description="This activity sends a POST request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Post Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskPassword" isParameter="false" location="AtTaskPassword" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskPassword" rootNodeName="AtTaskPassword" varName="AtTaskPassword"/><source canBeSubstitutedFromUI="true" displayName="AtTaskUsername" isParameter="false" location="AtTaskUsername" locationType="2" logicalName="srcDoc2" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskUsername" rootNodeName="AtTaskUsername" varName="AtTaskUsername"/><source canBeSubstitutedFromUI="true" displayName="FormEncodeContentType" isParameter="false" location="FormEncodeContentType" locationType="2" logicalName="srcDoc3" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="FormEncodeContentType" rootNodeName="FormEncodeContentType" varName="FormEncodeContentType"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-4" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-4" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="4" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-4" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="Concatenate" gridX="87" gridY="87" id="1" resultType="xsd:string"><arg dataType="xsd:string"><constant>username=</constant></arg><arg dataType="xsd:string" docName="srcDoc2"><path>/AtTaskUsername</path></arg><arg dataType="xsd:string"><constant>&amp;password=</constant></arg><arg dataType="xsd:string" docName="srcDoc1"><path>/AtTaskPassword</path></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="3" id="0" srcDocName="srcDoc1" srcPath="/AtTaskPassword"/><link destDocName="dstDoc2" destPath="/body" id="1" srcFunctoid="1"/><link destFunctoid="1" destFunctoidArgIndex="1" id="2" srcDocName="srcDoc2" srcPath="/AtTaskUsername"/></call></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc3" path="/FormEncodeContentType"/><to docName="dstDoc1" path="/httpheaders/Content-Type"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="4" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-4" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-4" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-4" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="4" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-4" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/AtTaskLoginResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
       ]]><key><![CDATA[summaryTask]]></key><![CDATA[
@@ -745,12 +733,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
                     ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
                     ]]><string><![CDATA[customHeaders]]></string><![CDATA[
@@ -776,12 +764,12 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
                     ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -793,20 +781,20 @@
               ]]><model><![CDATA[
                 ]]><map><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
                     ]]><string><![CDATA[maxRetries]]></string><![CDATA[
                     ]]><int><![CDATA[5]]></int><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
-                    ]]><string><![CDATA[retryInterval]]></string><![CDATA[
-                    ]]><int><![CDATA[30]]></int><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
                   ]]></entry><![CDATA[
                   ]]><entry><![CDATA[
                     ]]><string><![CDATA[timeout]]></string><![CDATA[
                     ]]><int><![CDATA[300]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[retryInterval]]></string><![CDATA[
+                    ]]><int><![CDATA[30]]></int><![CDATA[
                   ]]></entry><![CDATA[
                 ]]></map><![CDATA[
               ]]></model><![CDATA[
@@ -832,11 +820,269 @@
                 ]]><boolean><![CDATA[true]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+            ]]></map><![CDATA[
+          ]]></model><![CDATA[
+          ]]><listeners><![CDATA[
+            ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
+              ]]><key><![CDATA[mapInputsTask]]></key><![CDATA[
+              ]]><children/><![CDATA[
+              ]]><model><![CDATA[
+                ]]><map><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[true]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                ]]></map><![CDATA[
+              ]]></model><![CDATA[
+              ]]><listeners/><![CDATA[
+            ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
+            ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
+              ]]><key><![CDATA[mapOutputsTask]]></key><![CDATA[
+              ]]><children/><![CDATA[
+              ]]><model><![CDATA[
+                ]]><map><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                ]]></map><![CDATA[
+              ]]></model><![CDATA[
+              ]]><listeners/><![CDATA[
+            ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
+          ]]></listeners><![CDATA[
+        ]]></com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask><![CDATA[
+      ]]></listeners><![CDATA[
+    ]]></com.approuter.studio.connectors.http.tasks.HTTPEndpointTask><![CDATA[
+    ]]><com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask"/><![CDATA[
+    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
+    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
+  ]]></tasks><![CDATA[
+  ]]><valid><![CDATA[false]]></valid><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke><invoke activityId="7" activityName="" comments="" configurationId="read_json_id_1" description="Read Json Activity" expanded="true" moduleName="http://www.approuter.com/module/json/" name="Read JSON" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/><destination activityId="7" canBeSubstitutedFromUI="true" displayName="JsonText" isParameter="true" location="readjson-input-param-string.xsd-7" locationType="2" logicalName="dstDoc1" messageType="JsonText" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="JsonText" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="JsonText"/><destination activityId="7" canBeSubstitutedFromUI="true" displayName="Encoding" isParameter="true" location="readjson-input-param-encoding.xsd-7" locationType="2" logicalName="dstDoc2" messageType="Encoding" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="Encoding" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="Encoding"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/AtTaskLoginResponse"/><to docName="dstDoc1" path="/JsonText"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="OutputXml" isParameter="true" location="Schema_4_setupWorkflowTask_in_7" locationType="2" logicalName="srcDoc1" optionalParameter="false" originalRootNodeName="Json" rootNodeName="Json" varName="OutputXml"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskSessionID" isParameter="false" location="AtTaskSessionID" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskSessionID" rootNodeName="AtTaskSessionID" varName="AtTaskSessionID"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/sessionID"/><to docName="dstDoc1" path="/AtTaskSessionID"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+  ]]><tasks><![CDATA[
+    ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+      ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
+      ]]><children/><![CDATA[
+      ]]><model><![CDATA[
+        ]]><map><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonrootNodeName]]></string><![CDATA[
+            ]]><string><![CDATA[Json]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
+            ]]><int><![CDATA[1]]></int><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
+            ]]><string><![CDATA[{"data":{"userID":"f1da528fcbc67471e0433365290aabff","sessionID":"0a651dfbaffa43788d541dcd9459f1dc","versionInformation":{"currentAPI":"v4.0","buildNumber":"8284eae9cfb380345e1c8f33d0a0604b6a18853c","apiVersions":{"v1.0":"\/attask\/api\/v1.0\/","v2.0":"\/attask\/api\/v2.0\/","v3.0":"\/attask\/api\/v3.0\/","v4.0":"\/attask\/api\/v4.0\/"},"lastUpdated":"2015\/01\/05 13:23:13","release":"R16","version":"4.0"},"locale":"en_US","timeZone":"US\/Mountain","timeZoneName":"Mountain Standard Time","iso3Country":"USA","iso3Language":"eng","currency":{"useNegativeSign":false,"fractionDigits":2,"symbol":"$","ID":"USD","groupingSeparator":",","decimalSeparator":"."}}}]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
+            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
+            ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[jsonrootNodeArray]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[encoding]]></string><![CDATA[
+            ]]><string><![CDATA[ISO-8859-1]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
+            ]]><string/><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[encoded]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+        ]]></map><![CDATA[
+      ]]></model><![CDATA[
+      ]]><listeners><![CDATA[
+        ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
+          ]]><key><![CDATA[mapInputsTask]]></key><![CDATA[
+          ]]><children/><![CDATA[
+          ]]><model><![CDATA[
+            ]]><map><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[selected]]></string><![CDATA[
+                ]]><string><![CDATA[false]]></string><![CDATA[
+              ]]></entry><![CDATA[
+            ]]></map><![CDATA[
+          ]]></model><![CDATA[
+          ]]><listeners/><![CDATA[
+        ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
+        ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
+          ]]><key><![CDATA[mapOutputsTask]]></key><![CDATA[
+          ]]><children/><![CDATA[
+          ]]><model><![CDATA[
+            ]]><map><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[selected]]></string><![CDATA[
+                ]]><string><![CDATA[true]]></string><![CDATA[
+              ]]></entry><![CDATA[
+            ]]></map><![CDATA[
+          ]]></model><![CDATA[
+          ]]><listeners/><![CDATA[
+        ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
+      ]]></listeners><![CDATA[
+    ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.task.ActivityRefTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
+    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.task.ActivityRefTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
+  ]]></tasks><![CDATA[
+  ]]><valid><![CDATA[false]]></valid><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope><catchAll activityId="16" comments="" configurationId="flow_catchAll_id_1" description="Catch All Activity" expanded="true" faultInfo="faultInfo" faultName="faultName" faultVariable="faultData" name="CatchAll"><sequence activityId="281" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="sequence"><empty activityId="269" comments="" configurationId="flow_empty_id_1" description="Empty Activity" expanded="true" name="Empty"/></sequence></catchAll></scope><scope activityId="18" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="true" name="AtTaskGetTasks"><startScope activityId="282" name="scope"><invoke activityId="121" activityName="" comments="" configurationId="http_post_id" description="This activity sends a POST request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Post Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskSessionID" isParameter="false" location="AtTaskSessionID" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskSessionID" rootNodeName="AtTaskSessionID" varName="AtTaskSessionID"/><source canBeSubstitutedFromUI="true" displayName="ATTaskSearchQuery" isParameter="false" location="ATTaskSearchQuery" locationType="2" logicalName="srcDoc2" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskSearchQuery" rootNodeName="ATTaskSearchQuery" varName="ATTaskSearchQuery"/><source canBeSubstitutedFromUI="true" displayName="HTTP_GET" isParameter="false" location="HTTP_GET" locationType="2" logicalName="srcDoc4" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="HTTP_GET" rootNodeName="HTTP_GET" varName="HTTP_GET"/><source canBeSubstitutedFromUI="true" displayName="FormEncodeContentType" isParameter="false" location="FormEncodeContentType" locationType="2" logicalName="srcDoc5" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="FormEncodeContentType" rootNodeName="FormEncodeContentType" varName="FormEncodeContentType"/><destination activityId="121" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-121" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="121" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-121" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="121" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-121" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/ATTaskSearchQuery"/><to docName="dstDoc2" path="/body"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/AtTaskSessionID"/><to docName="dstDoc1" path="/httpheaders/queryParameters/sessionID"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc4" path="/HTTP_GET"/><to docName="dstDoc1" path="/httpheaders/queryParameters/method"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc5" path="/FormEncodeContentType"/><to docName="dstDoc1" path="/httpheaders/Content-Type"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="121" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-121" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="121" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-121" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="121" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-121" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="121" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-121" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="ReplaceString" gridX="155" gridY="70" id="1" resultType="xsd:string"><arg dataType="xsd:string" docName="srcDoc2"><path>/body</path></arg><arg dataType="xsd:string"><constant>DE:</constant></arg><arg dataType="xsd:string"><constant>DE-</constant></arg></functoid><functoid function="ReplaceString" gridX="189" gridY="53" id="2" resultType="xsd:string"><arg dataType="xsd:string"><result functoidId="1" srcFunctoidName="ReplaceString"/></arg><arg dataType="xsd:string"><constant> </constant></arg><arg dataType="xsd:string"><constant>_</constant></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="0" id="0" srcDocName="srcDoc2" srcPath="/body"/><link destFunctoid="2" destFunctoidArgIndex="0" id="1" srcFunctoid="1"/><link destDocName="dstDoc1" destPath="/ATTaskResponse" id="2" srcFunctoid="2"/></call></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+  ]]><tasks><![CDATA[
+    ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
+      ]]><key><![CDATA[summaryTask]]></key><![CDATA[
+      ]]><children/><![CDATA[
+      ]]><model><![CDATA[
+        ]]><map><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
+          ]]></entry><![CDATA[
+        ]]></map><![CDATA[
+      ]]></model><![CDATA[
+      ]]><listeners/><![CDATA[
+    ]]></com.approuter.studio.connectors.task.SummaryTask><![CDATA[
+    ]]><com.approuter.studio.connectors.http.tasks.HTTPEndpointTask><![CDATA[
+      ]]><key><![CDATA[endpointTask]]></key><![CDATA[
+      ]]><children/><![CDATA[
+      ]]><model><![CDATA[
+        ]]><map><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[endpoint]]></string><![CDATA[
+            ]]><string><![CDATA[appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828]]></string><![CDATA[
+          ]]></entry><![CDATA[
+        ]]></map><![CDATA[
+      ]]></model><![CDATA[
+      ]]><listeners><![CDATA[
+        ]]><com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask><![CDATA[
+          ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
+          ]]><children><![CDATA[
+            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+              ]]><key><![CDATA[requestHeadersTask]]></key><![CDATA[
+              ]]><children/><![CDATA[
+              ]]><model><![CDATA[
+                ]]><map><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[customHeaders]]></string><![CDATA[
+                    ]]><com.approuter.studio.connectors.http.header.HeaderModel><![CDATA[
+                      ]]><headers class="vector"><![CDATA[
+                        ]]><com.approuter.studio.connectors.http.header.Header><![CDATA[
+                          ]]><name><![CDATA[Content-Type]]></name><![CDATA[
+                          ]]><description><![CDATA[Specifies the media type of the entity-body.]]></description><![CDATA[
+                          ]]><type><![CDATA[xsd:string]]></type><![CDATA[
+                          ]]><minOccurs><![CDATA[0]]></minOccurs><![CDATA[
+                          ]]><maxOccurs><![CDATA[1]]></maxOccurs><![CDATA[
+                        ]]></com.approuter.studio.connectors.http.header.Header><![CDATA[
+                      ]]></headers><![CDATA[
+                    ]]></com.approuter.studio.connectors.http.header.HeaderModel><![CDATA[
+                  ]]></entry><![CDATA[
+                ]]></map><![CDATA[
+              ]]></model><![CDATA[
+              ]]><listeners/><![CDATA[
+            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+              ]]><key><![CDATA[responseHeadersTask]]></key><![CDATA[
+              ]]><children/><![CDATA[
+              ]]><model><![CDATA[
+                ]]><map><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                ]]></map><![CDATA[
+              ]]></model><![CDATA[
+              ]]><listeners/><![CDATA[
+            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+              ]]><key><![CDATA[retryTask]]></key><![CDATA[
+              ]]><children/><![CDATA[
+              ]]><model><![CDATA[
+                ]]><map><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
+                    ]]><int><![CDATA[5]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[selected]]></string><![CDATA[
+                    ]]><string><![CDATA[false]]></string><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[timeout]]></string><![CDATA[
+                    ]]><int><![CDATA[300]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                  ]]><entry><![CDATA[
+                    ]]><string><![CDATA[retryInterval]]></string><![CDATA[
+                    ]]><int><![CDATA[30]]></int><![CDATA[
+                  ]]></entry><![CDATA[
+                ]]></map><![CDATA[
+              ]]></model><![CDATA[
+              ]]><listeners/><![CDATA[
+            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+          ]]></children><![CDATA[
+          ]]><model><![CDATA[
+            ]]><map><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[selected]]></string><![CDATA[
+                ]]><string><![CDATA[false]]></string><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_request_extrapath]]></string><![CDATA[
+                ]]><string><![CDATA[attask/api/task/search?method=GET&sessionID=94bfd56aab0f48959ccc99002d87df1f]]></string><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_request_fault_on_error]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
               ]]><entry><![CDATA[
                 ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
                 ]]><boolean><![CDATA[false]]></boolean><![CDATA[
               ]]></entry><![CDATA[
             ]]></map><![CDATA[
@@ -877,7 +1123,7 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke><invoke activityId="7" activityName="" comments="" configurationId="read_json_id_1" description="Read Json Activity" expanded="true" moduleName="http://www.approuter.com/module/json/" name="Read JSON" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="AtTaskLoginResponse" isParameter="false" location="AtTaskLoginResponse" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskLoginResponse" rootNodeName="AtTaskLoginResponse" varName="AtTaskLoginResponse"/><destination activityId="7" canBeSubstitutedFromUI="true" displayName="JsonText" isParameter="true" location="readjson-input-param-string.xsd-7" locationType="2" logicalName="dstDoc1" messageType="JsonText" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="JsonText" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="JsonText"/><destination activityId="7" canBeSubstitutedFromUI="true" displayName="Encoding" isParameter="true" location="readjson-input-param-encoding.xsd-7" locationType="2" logicalName="dstDoc2" messageType="Encoding" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="Encoding" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="Encoding"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/AtTaskLoginResponse"/><to docName="dstDoc1" path="/JsonText"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="OutputXml" isParameter="true" location="Schema_4_setupWorkflowTask_in_7" locationType="2" logicalName="srcDoc1" optionalParameter="false" originalRootNodeName="Json" rootNodeName="Json" varName="OutputXml"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskSessionID" isParameter="false" location="AtTaskSessionID" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="AtTaskSessionID" rootNodeName="AtTaskSessionID" varName="AtTaskSessionID"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/sessionID"/><to docName="dstDoc1" path="/AtTaskSessionID"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke><invoke activityId="119" activityName="" comments="" configurationId="read_json_id_1" description="Read Json Activity" expanded="true" moduleName="http://www.approuter.com/module/json/" name="Read JSON" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/><destination activityId="119" canBeSubstitutedFromUI="true" displayName="JsonText" isParameter="true" location="readjson-input-param-string.xsd-119" locationType="2" logicalName="dstDoc1" messageType="JsonText" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="JsonText" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="JsonText"/><destination activityId="119" canBeSubstitutedFromUI="true" displayName="Encoding" isParameter="true" location="readjson-input-param-encoding.xsd-119" locationType="2" logicalName="dstDoc2" messageType="Encoding" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="Encoding" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="Encoding"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/ATTaskResponse"/><to docName="dstDoc1" path="/JsonText"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="OutputXml" isParameter="true" location="Schema_4_setupWorkflowTask_in_119" locationType="2" logicalName="srcDoc1" optionalParameter="false" originalRootNodeName="Json" rootNodeName="Json" varName="OutputXml"/><destination canBeSubstitutedFromUI="true" displayName="ATTasks" isParameter="false" location="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" locationType="0" logicalName="dstDoc1" optionalParameter="false" originalRootNodeName="AtTaskTasks" rootNodeName="AtTaskTasks" varName="ATTasks"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/ihmap:instances"/><to docName="dstDoc1" path="/AtTaskTasks/Task/ihmap:instances"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/ID"/><to docName="dstDoc1" path="/AtTaskTasks/Task/ID"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/name"/><to docName="dstDoc1" path="/AtTaskTasks/Task/name"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/objCode"/><to docName="dstDoc1" path="/AtTaskTasks/Task/objCode"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/categoryID"/><to docName="dstDoc1" path="/AtTaskTasks/Task/categoryID"/></do></rule><rule emitCData="false" guaranteed="true"><call guaranteed="true"><functoid function="ReplaceString" gridX="155" gridY="87" id="1" resultType="xsd:string"><arg dataType="xsd:string" docName="srcDoc1"><path>/Json/data/DE-TFS_Project</path></arg><arg dataType="xsd:string"><constant>_</constant></arg><arg dataType="xsd:string"><constant> </constant></arg></functoid><link destFunctoid="1" destFunctoidArgIndex="0" id="0" srcDocName="srcDoc1" srcPath="/Json/data/DE-TFS_Project"/><link destDocName="dstDoc1" destPath="/AtTaskTasks/Task/DE-TFS_Project" id="1" srcFunctoid="1"/></call></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
       ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
@@ -889,40 +1135,40 @@
             ]]><string><![CDATA[Json]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
-            ]]><string><![CDATA[{"data":{"userID":"f1da528fcbc67471e0433365290aabff","sessionID":"0a651dfbaffa43788d541dcd9459f1dc","versionInformation":{"currentAPI":"v4.0","buildNumber":"8284eae9cfb380345e1c8f33d0a0604b6a18853c","apiVersions":{"v1.0":"\/attask\/api\/v1.0\/","v2.0":"\/attask\/api\/v2.0\/","v3.0":"\/attask\/api\/v3.0\/","v4.0":"\/attask\/api\/v4.0\/"},"lastUpdated":"2015\/01\/05 13:23:13","release":"R16","version":"4.0"},"locale":"en_US","timeZone":"US\/Mountain","timeZoneName":"Mountain Standard Time","iso3Country":"USA","iso3Language":"eng","currency":{"useNegativeSign":false,"fractionDigits":2,"symbol":"$","ID":"USD","groupingSeparator":",","decimalSeparator":"."}}}]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
             ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
             ]]><int><![CDATA[1]]></int><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
-            ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
+            ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
+            ]]><string><![CDATA[{"data":[{"ID":"54933a60000df5ca733dc2325a975f2f","name":"asdfasdfsa_asd_fsad_f","objCode":"TASK","categoryID":"54be9a79000029810f69033123cc05d7","DE-TFS_Project":"Choice_1"}]}]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
             ]]><boolean><![CDATA[true]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
+            ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
+            ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeArray]]></string><![CDATA[
             ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
-            ]]><string/><![CDATA[
+            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoding]]></string><![CDATA[
             ]]><string><![CDATA[ISO-8859-1]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
-            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
+            ]]><string/><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoded]]></string><![CDATA[
@@ -963,165 +1209,7 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.task.ActivityRefTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope><catchAll activityId="16" comments="" configurationId="flow_catchAll_id_1" description="Catch All Activity" expanded="true" faultInfo="faultInfo" faultName="faultName" faultVariable="faultData" name="CatchAll"><sequence activityId="78" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="sequence"><empty activityId="17" comments="" configurationId="flow_empty_id_1" description="Empty Activity" expanded="true" name="Empty"/></sequence></catchAll></scope><scope activityId="18" comments="" configurationId="flow_basic_scope_id_1" description="Group of Activities" expanded="true" name="AtTaskGetTasks"><startScope activityId="79" name="scope"><invoke activityId="56" activityName="" comments="" configurationId="http_get_id" description="This activity sends a GET request to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Get Request" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-input-parameter-header.xsd-56" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-input-parameter-body-string.xsd-56" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="56" canBeSubstitutedFromUI="true" displayName="httpConnParameter" isParameter="true" location="http-request-input-parameter-connection.xsd-56" locationType="2" logicalName="dstDoc3" messageType="httpConnParameter" optionalParameter="true" originalRootNodeName="httpConnParameter" rootNodeName="httpConnParameter"/></specInfo><doMapping/></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="56" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-method-specific-request-output-parameter-header.xsd-56" locationType="2" logicalName="srcDoc1" messageType="httpheaders" optionalParameter="false" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-request-output-parameter-body-string.xsd-56" locationType="2" logicalName="srcDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-request-output-parameter-responsecode-int.xsd-56" locationType="2" logicalName="srcDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><source activityId="56" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-request-output-parameter-responsemessage-string.xsd-56" locationType="2" logicalName="srcDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/><destination canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc2" path="/body"/><to docName="dstDoc1" path="/ATTaskResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
-  ]]><tasks><![CDATA[
-    ]]><com.approuter.studio.connectors.task.SummaryTask><![CDATA[
-      ]]><key><![CDATA[summaryTask]]></key><![CDATA[
-      ]]><children/><![CDATA[
-      ]]><model><![CDATA[
-        ]]><map><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-        ]]></map><![CDATA[
-      ]]></model><![CDATA[
-      ]]><listeners/><![CDATA[
-    ]]></com.approuter.studio.connectors.task.SummaryTask><![CDATA[
-    ]]><com.approuter.studio.connectors.http.tasks.HTTPEndpointTask><![CDATA[
-      ]]><key><![CDATA[endpointTask]]></key><![CDATA[
-      ]]><children/><![CDATA[
-      ]]><model><![CDATA[
-        ]]><map><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[endpoint]]></string><![CDATA[
-            ]]><string><![CDATA[appnet-guid://39D44E6AF0363088C460CF44E9762A1F698BCF7EC1BB5D2A38D3601E78732828]]></string><![CDATA[
-          ]]></entry><![CDATA[
-        ]]></map><![CDATA[
-      ]]></model><![CDATA[
-      ]]><listeners><![CDATA[
-        ]]><com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask><![CDATA[
-          ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
-          ]]><children><![CDATA[
-            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-              ]]><key><![CDATA[requestHeadersTask]]></key><![CDATA[
-              ]]><children/><![CDATA[
-              ]]><model><![CDATA[
-                ]]><map><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                ]]></map><![CDATA[
-              ]]></model><![CDATA[
-              ]]><listeners/><![CDATA[
-            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-              ]]><key><![CDATA[responseHeadersTask]]></key><![CDATA[
-              ]]><children/><![CDATA[
-              ]]><model><![CDATA[
-                ]]><map><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
-                    ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-                  ]]></entry><![CDATA[
-                ]]></map><![CDATA[
-              ]]></model><![CDATA[
-              ]]><listeners/><![CDATA[
-            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-            ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-              ]]><key><![CDATA[retryTask]]></key><![CDATA[
-              ]]><children/><![CDATA[
-              ]]><model><![CDATA[
-                ]]><map><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[maxRetries]]></string><![CDATA[
-                    ]]><int><![CDATA[5]]></int><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[retryInterval]]></string><![CDATA[
-                    ]]><int><![CDATA[30]]></int><![CDATA[
-                  ]]></entry><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[timeout]]></string><![CDATA[
-                    ]]><int><![CDATA[300]]></int><![CDATA[
-                  ]]></entry><![CDATA[
-                ]]></map><![CDATA[
-              ]]></model><![CDATA[
-              ]]><listeners/><![CDATA[
-            ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
-          ]]></children><![CDATA[
-          ]]><model><![CDATA[
-            ]]><map><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[selected]]></string><![CDATA[
-                ]]><string><![CDATA[true]]></string><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_compresion]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_extrapath]]></string><![CDATA[
-                ]]><string><![CDATA[attask/api/task/search?fields=*,parameterValues:*&status=CPL&$$LIMIT=5&sessionID={sessionID}]]></string><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_fault_on_error]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_ip]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-              ]]></entry><![CDATA[
-              ]]><entry><![CDATA[
-                ]]><string><![CDATA[http_request_binary_op]]></string><![CDATA[
-                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
-              ]]></entry><![CDATA[
-            ]]></map><![CDATA[
-          ]]></model><![CDATA[
-          ]]><listeners><![CDATA[
-            ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
-              ]]><key><![CDATA[mapInputsTask]]></key><![CDATA[
-              ]]><children/><![CDATA[
-              ]]><model><![CDATA[
-                ]]><map><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                ]]></map><![CDATA[
-              ]]></model><![CDATA[
-              ]]><listeners/><![CDATA[
-            ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
-            ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
-              ]]><key><![CDATA[mapOutputsTask]]></key><![CDATA[
-              ]]><children/><![CDATA[
-              ]]><model><![CDATA[
-                ]]><map><![CDATA[
-                  ]]><entry><![CDATA[
-                    ]]><string><![CDATA[selected]]></string><![CDATA[
-                    ]]><string><![CDATA[false]]></string><![CDATA[
-                  ]]></entry><![CDATA[
-                ]]></map><![CDATA[
-              ]]></model><![CDATA[
-              ]]><listeners/><![CDATA[
-            ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
-          ]]></listeners><![CDATA[
-        ]]></com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask><![CDATA[
-      ]]></listeners><![CDATA[
-    ]]></com.approuter.studio.connectors.http.tasks.HTTPEndpointTask><![CDATA[
-    ]]><com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask"/><![CDATA[
-    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
-    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPEndpointTask/listeners/com.approuter.studio.connectors.http.tasks.HTTPSendRequestTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
-  ]]></tasks><![CDATA[
-  ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke><invoke activityId="25" activityName="" comments="" configurationId="read_json_id_1" description="Read Json Activity" expanded="true" moduleName="http://www.approuter.com/module/json/" name="Read JSON" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="ATTaskResponse" isParameter="false" location="ATTaskResponse" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="ATTaskResponse" rootNodeName="ATTaskResponse" varName="ATTaskResponse"/><destination activityId="25" canBeSubstitutedFromUI="true" displayName="JsonText" isParameter="true" location="readjson-input-param-string.xsd-25" locationType="2" logicalName="dstDoc1" messageType="JsonText" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="JsonText" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="JsonText"/><destination activityId="25" canBeSubstitutedFromUI="true" displayName="Encoding" isParameter="true" location="readjson-input-param-encoding.xsd-25" locationType="2" logicalName="dstDoc2" messageType="Encoding" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="Encoding" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="Encoding"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/ATTaskResponse"/><to docName="dstDoc1" path="/JsonText"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="OutputXml" isParameter="true" location="Schema_4_setupWorkflowTask_in_25" locationType="2" logicalName="srcDoc1" optionalParameter="false" originalRootNodeName="Json" rootNodeName="Json" varName="OutputXml"/><destination canBeSubstitutedFromUI="true" displayName="AtTaskTasks" isParameter="false" location="appnet-guid://0A9C4C7145C623780FDEE203CC16274B226A771A656053A5B1C79308A4AE2FFF" locationType="0" logicalName="dstDoc1" optionalParameter="false" originalRootNodeName="Tasks" rootNodeName="Tasks" varName="AtTaskTasks" xpathToRootNode="/Tasks"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/Json/data/ihmap:instances"/><to docName="dstDoc1" path="/Tasks/Task/ihmap:instances"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope></scope><foreach activityId="194" comments="" configurationId="flow_for_each_id_1" description="ForEach Activity" expanded="true" inputVariable="ATTasks" loopCounter="loopcounter_1" loopValue="ATTask" name="Loop Through Tasks" query="/AtTaskTasks/Task"><sequence activityId="283" comments="" configurationId="flow_sequence_id_1" description="Start Activity" expanded="true" name="sequence"><invoke activityId="205" activityName="" comments="" configurationId="write_json_id_1" description="Write Json Activity" expanded="true" moduleName="http://www.approuter.com/module/json/" name="Write JSON" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="ATTask" isParameter="false" location="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" locationType="0" logicalName="srcDoc2" optionalParameter="false" originalRootNodeName="AtTaskTasks" rootNodeName="Task" varName="ATTask" xpathToRootNode="/AtTaskTasks/Task"/><destination canBeSubstitutedFromUI="true" displayName="InputXml" isParameter="true" location="appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47" locationType="0" logicalName="dstDoc1" optionalParameter="false" originalRootNodeName="AtTaskTasks" rootNodeName="AtTaskTasks" varName="InputXml"/><destination activityId="205" canBeSubstitutedFromUI="true" displayName="DocTypeSystem" isParameter="true" location="writejson-input-param.xsd-205" locationType="2" logicalName="dstDoc2" messageType="DocTypeSystem" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="DocTypeSystem" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="DocTypeSystem"/><destination activityId="205" canBeSubstitutedFromUI="true" displayName="DocTypePublic" isParameter="true" location="writejson-input-param.xsd-205" locationType="2" logicalName="dstDoc3" messageType="DocTypePublic" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="DocTypePublic" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="DocTypePublic"/><destination activityId="205" canBeSubstitutedFromUI="true" displayName="OmitXmlDecl" isParameter="true" location="writejson-input-param.xsd-205" locationType="2" logicalName="dstDoc4" messageType="OmitXmlDecl" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="OmitXmlDecl" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="OmitXmlDecl"/><destination activityId="205" canBeSubstitutedFromUI="true" displayName="Encoding" isParameter="true" location="writejson-input-param.xsd-205" locationType="2" logicalName="dstDoc5" messageType="Encoding" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="Encoding" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="Encoding"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><to docName="dstDoc1" path="/AtTaskTasks/Task/DE-TFS_Project"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><to docName="dstDoc1" path="/AtTaskTasks/Task/ID"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><to docName="dstDoc1" path="/AtTaskTasks/Task/categoryID"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><to docName="dstDoc1" path="/AtTaskTasks/Task/name"/></do></rule><rule emitCData="false" guaranteed="true"><do guaranteed="true"><to docName="dstDoc1" path="/AtTaskTasks/Task/objCode"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><outputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="false" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source activityId="205" canBeSubstitutedFromUI="true" displayName="JsonText" isParameter="true" location="writejson-output-param-string.xsd-205" locationType="2" logicalName="srcDoc1" messageType="JsonText" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="JsonText" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="JsonText"/><destination canBeSubstitutedFromUI="true" displayName="SomeResponse" isParameter="false" location="SomeResponse" locationType="2" logicalName="dstDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="SomeResponse" rootNodeName="SomeResponse" varName="SomeResponse"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/JsonText"/><to docName="dstDoc1" path="/SomeResponse"/></do></rule></doMapping></mapSpec></outputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
   ]]><tasks><![CDATA[
     ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
       ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
@@ -1130,618 +1218,43 @@
         ]]><map><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeName]]></string><![CDATA[
-            ]]><string><![CDATA[Json]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[selected]]></string><![CDATA[
-            ]]><string><![CDATA[false]]></string><![CDATA[
-          ]]></entry><![CDATA[
-          ]]><entry><![CDATA[
-            ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
-            ]]><string><![CDATA[{
-    "data": [
-        {
-            "ID": "54077c34000cf1d1fe4d973e1d0044ca",
-            "name": "Design document",
-            "objCode": "TASK",
-            "URL": null,
-            "actualCompletionDate": "2014-09-26T09:21:33:158-0600",
-            "actualCost": 0,
-            "actualDuration": 0,
-            "actualDurationMinutes": 0,
-            "actualExpenseCost": 0,
-            "actualLaborCost": 0,
-            "actualRevenue": 0,
-            "actualStartDate": "2014-09-26T09:21:33:158-0600",
-            "actualWork": 2,
-            "actualWorkRequired": 120,
-            "approvalEstStartDate": null,
-            "approvalPlannedStartDate": null,
-            "approvalProcessID": null,
-            "approvalProjectedStartDate": null,
-            "assignedToID": "53c95cfb00015057d64a2e5841fd6d79",
-            "auditTypes": [
-                "AA"
-            ],
-            "billingAmount": 0,
-            "billingRecordID": null,
-            "categoryID": null,
-            "commitDate": null,
-            "completionPendingDate": null,
-            "condition": null,
-            "constraintDate": "2030-01-02T17:00:00:000-0700",
-            "costAmount": 0,
-            "costType": "UHR",
-            "cpi": 0,
-            "csi": 0,
-            "currentApprovalStepID": null,
-            "customerID": "f1da528fcbbf7471e0433365290aabff",
-            "description": "Take in design document and set general preferences",
-            "duration": 1,
-            "durationMinutes": 480,
-            "durationType": "A",
-            "durationUnit": "D",
-            "eac": 3.33,
-            "enteredByID": "f1da528fcbc67471e0433365290aabff",
-            "entryDate": "2014-09-03T14:38:12:176-0600",
-            "estCompletionDate": "2029-12-17T17:00:00:000-0700",
-            "estStartDate": "2014-10-01T14:25:00:000-0600",
-            "extRefID": null,
-            "groupID": "f1da528fd9647471e0433365290aabff",
-            "handoffDate": null,
-            "hasDocuments": false,
-            "hasExpenses": false,
-            "hasMessages": false,
-            "hasNotes": false,
-            "hasResolvables": false,
-            "hasTimedNotifications": false,
-            "indent": 2,
-            "isCritical": false,
-            "isLevelingExcluded": false,
-            "lastConditionNoteID": null,
-            "lastNoteID": null,
-            "lastUpdateDate": "2014-10-02T09:50:41:937-0600",
-            "lastUpdatedByID": "f1da528fcbc67471e0433365290aabff",
-            "levelingStartDelay": 0,
-            "masterTaskID": null,
-            "milestoneID": null,
-            "numberOfChildren": 0,
-            "numberOpenOpTasks": 0,
-            "originalDuration": 0,
-            "originalWorkRequired": 0,
-            "parentID": "54077945000ced8fcc2b5dc72b9d6ff8",
-            "parentLag": 0,
-            "parentLagType": "d",
-            "percentComplete": 100,
-            "personal": false,
-            "plannedCompletionDate": "2030-01-02T17:00:00:000-0700",
-            "plannedCost": 0,
-            "plannedDuration": 1,
-            "plannedDurationMinutes": 480,
-            "plannedExpenseCost": 0,
-            "plannedLaborCost": 0,
-            "plannedRevenue": 0,
-            "plannedStartDate": "2014-09-03T09:00:00:000-0600",
-            "previousStatus": "NEW",
-            "priority": 2,
-            "progressStatus": "ON",
-            "projectID": "540778e2000ced362ca6fe8be8bd6452",
-            "projectedCompletionDate": "2029-12-17T17:00:00:000-0700",
-            "projectedDurationMinutes": 480,
-            "projectedStartDate": "2029-12-17T09:00:00:000-0700",
-            "recurrenceNumber": null,
-            "recurrenceRuleID": null,
-            "referenceNumber": 59831,
-            "rejectionIssueID": null,
-            "remainingDurationMinutes": 0,
-            "reservedTimeID": null,
-            "resourceScope": "NONE",
-            "revenueType": "NOB",
-            "roleID": null,
-            "slackDate": "2029-12-29",
-            "spi": 1,
-            "status": "CPL",
-            "statusUpdate": null,
-            "submittedByID": null,
-            "taskConstraint": "MFO",
-            "taskNumber": 17,
-            "teamID": null,
-            "templateTaskID": null,
-            "trackingMode": "USER",
-            "wbs": "3.1.3",
-            "work": 1.33,
-            "workRequired": 80,
-            "parameterValues": {}
-        },
-        {
-            "ID": "54526afe00078ad63702318f22e78d4e",
-            "name": "Step 2 for Coding Task 1",
-            "objCode": "TASK",
-            "URL": null,
-            "actualCompletionDate": "2014-10-30T11:31:43:475-0600",
-            "actualCost": 0,
-            "actualDuration": 0,
-            "actualDurationMinutes": 1,
-            "actualExpenseCost": 0,
-            "actualLaborCost": 0,
-            "actualRevenue": 0,
-            "actualStartDate": "2014-10-30T11:30:42:108-0600",
-            "actualWork": 0,
-            "actualWorkRequired": 0,
-            "approvalEstStartDate": null,
-            "approvalPlannedStartDate": null,
-            "approvalProcessID": null,
-            "approvalProjectedStartDate": null,
-            "assignedToID": "f1da528fcd997471e0433365290aabff",
-            "auditTypes": [],
-            "billingAmount": 0,
-            "billingRecordID": null,
-            "categoryID": null,
-            "commitDate": null,
-            "completionPendingDate": null,
-            "condition": null,
-            "constraintDate": "2014-11-07T17:00:00:000-0700",
-            "costAmount": 0,
-            "costType": "UHR",
-            "cpi": 1,
-            "csi": 1,
-            "currentApprovalStepID": null,
-            "customerID": "f1da528fcbbf7471e0433365290aabff",
-            "description": null,
-            "duration": 4,
-            "durationMinutes": 1920,
-            "durationType": "A",
-            "durationUnit": "D",
-            "eac": 1.5,
-            "enteredByID": "f1da528fcbc67471e0433365290aabff",
-            "entryDate": "2014-10-30T10:44:46:567-0600",
-            "estCompletionDate": "2014-10-30T11:31:43:475-0600",
-            "estStartDate": "2014-10-30T11:30:42:108-0600",
-            "extRefID": null,
-            "groupID": "f1da528fd9667471e0433365290aabff",
-            "handoffDate": null,
-            "hasDocuments": false,
-            "hasExpenses": false,
-            "hasMessages": false,
-            "hasNotes": false,
-            "hasResolvables": false,
-            "hasTimedNotifications": false,
-            "indent": 3,
-            "isCritical": false,
-            "isLevelingExcluded": false,
-            "lastConditionNoteID": null,
-            "lastNoteID": null,
-            "lastUpdateDate": "2014-10-30T11:33:50:917-0600",
-            "lastUpdatedByID": "f1da528fcbc67471e0433365290aabff",
-            "levelingStartDelay": 0,
-            "masterTaskID": null,
-            "milestoneID": null,
-            "numberOfChildren": 2,
-            "numberOpenOpTasks": 0,
-            "originalDuration": 182,
-            "originalWorkRequired": 180,
-            "parentID": "54526ad700078a2caa8f5afce5164421",
-            "parentLag": 0,
-            "parentLagType": "d",
-            "percentComplete": 100,
-            "personal": false,
-            "plannedCompletionDate": "2014-11-07T17:00:00:000-0700",
-            "plannedCost": 0,
-            "plannedDuration": 4,
-            "plannedDurationMinutes": 1920,
-            "plannedExpenseCost": 0,
-            "plannedLaborCost": 0,
-            "plannedRevenue": 0,
-            "plannedStartDate": "2014-11-04T09:00:00:000-0700",
-            "previousStatus": "INP",
-            "priority": 2,
-            "progressStatus": "ON",
-            "projectID": "53e0113900019c44e1127faad95923e5",
-            "projectedCompletionDate": "2014-10-30T11:31:43:475-0600",
-            "projectedDurationMinutes": 1,
-            "projectedStartDate": "2014-10-30T11:30:42:108-0600",
-            "recurrenceNumber": null,
-            "recurrenceRuleID": null,
-            "referenceNumber": 60987,
-            "rejectionIssueID": null,
-            "remainingDurationMinutes": 0,
-            "reservedTimeID": null,
-            "resourceScope": "NONE",
-            "revenueType": "NOB",
-            "roleID": "f1da528fd1237471e0433365290aabff",
-            "slackDate": "2014-11-27",
-            "spi": 1,
-            "status": "CPL",
-            "statusUpdate": null,
-            "submittedByID": null,
-            "taskConstraint": "MFO",
-            "taskNumber": 41,
-            "teamID": "f1da528fcd957471e0433365290aabff",
-            "templateTaskID": null,
-            "trackingMode": "USER",
-            "wbs": "3.4.2.2",
-            "work": 1.5,
-            "workRequired": 90,
-            "parameterValues": {}
-        },
-        {
-            "ID": "534eff100000229c427356f9d9a6bb81",
-            "name": "Define Business Processes",
-            "objCode": "TASK",
-            "URL": null,
-            "actualCompletionDate": "2014-07-29T08:22:39:846-0600",
-            "actualCost": 0,
-            "actualDuration": 0,
-            "actualDurationMinutes": 0,
-            "actualExpenseCost": 0,
-            "actualLaborCost": 0,
-            "actualRevenue": 0,
-            "actualStartDate": "2014-07-29T08:22:39:846-0600",
-            "actualWork": 0,
-            "actualWorkRequired": 0,
-            "approvalEstStartDate": null,
-            "approvalPlannedStartDate": null,
-            "approvalProcessID": null,
-            "approvalProjectedStartDate": null,
-            "assignedToID": null,
-            "auditTypes": [
-                "AA"
-            ],
-            "billingAmount": 0,
-            "billingRecordID": null,
-            "categoryID": "f1da528fd20f7471e0433365290aabff",
-            "commitDate": null,
-            "completionPendingDate": null,
-            "condition": null,
-            "constraintDate": null,
-            "costAmount": 0,
-            "costType": "UHR",
-            "cpi": 1,
-            "csi": 1,
-            "currentApprovalStepID": null,
-            "customerID": "f1da528fcbbf7471e0433365290aabff",
-            "description": null,
-            "duration": 3,
-            "durationMinutes": 1440,
-            "durationType": "A",
-            "durationUnit": "D",
-            "eac": 8,
-            "enteredByID": "f1da528fcbc37471e0433365290aabff",
-            "entryDate": "2014-04-16T16:07:12:148-0600",
-            "estCompletionDate": "2014-07-29T08:22:39:846-0600",
-            "estStartDate": "2014-07-29T08:22:39:846-0600",
-            "extRefID": null,
-            "groupID": "f1da528fd1f87471e0433365290aabff",
-            "handoffDate": null,
-            "hasDocuments": false,
-            "hasExpenses": false,
-            "hasMessages": false,
-            "hasNotes": false,
-            "hasResolvables": false,
-            "hasTimedNotifications": false,
-            "indent": 1,
-            "isCritical": true,
-            "isLevelingExcluded": false,
-            "lastConditionNoteID": null,
-            "lastNoteID": null,
-            "lastUpdateDate": "2014-09-29T15:27:47:262-0600",
-            "lastUpdatedByID": "f1da528fcbc67471e0433365290aabff",
-            "levelingStartDelay": 0,
-            "masterTaskID": null,
-            "milestoneID": null,
-            "numberOfChildren": 0,
-            "numberOpenOpTasks": 0,
-            "originalDuration": 0,
-            "originalWorkRequired": 0,
-            "parentID": "534eff10000022996023d7f0761f0400",
-            "parentLag": 0,
-            "parentLagType": "d",
-            "percentComplete": 100,
-            "personal": false,
-            "plannedCompletionDate": "2014-04-09T13:00:00:000-0600",
-            "plannedCost": 400,
-            "plannedDuration": 3,
-            "plannedDurationMinutes": 1440,
-            "plannedExpenseCost": 0,
-            "plannedLaborCost": 400,
-            "plannedRevenue": 0,
-            "plannedStartDate": "2014-04-04T13:00:00:000-0600",
-            "previousStatus": "NEW",
-            "priority": 2,
-            "progressStatus": "ON",
-            "projectID": "533ed3aa0000625e00006f125513bb65",
-            "projectedCompletionDate": "2014-07-29T08:22:39:846-0600",
-            "projectedDurationMinutes": 0,
-            "projectedStartDate": "2014-07-29T08:22:39:846-0600",
-            "recurrenceNumber": null,
-            "recurrenceRuleID": null,
-            "referenceNumber": 9305,
-            "rejectionIssueID": null,
-            "remainingDurationMinutes": 0,
-            "reservedTimeID": null,
-            "resourceScope": "NONE",
-            "revenueType": "NOB",
-            "roleID": "f1da528fce0d7471e0433365290aabff",
-            "slackDate": "2014-07-29",
-            "spi": 1,
-            "status": "CPL",
-            "statusUpdate": null,
-            "submittedByID": null,
-            "taskConstraint": "ASAP",
-            "taskNumber": 3,
-            "teamID": null,
-            "templateTaskID": "f1da528ffb1f7471e0433365290aabff",
-            "trackingMode": "USER",
-            "wbs": "1.2",
-            "work": 8,
-            "workRequired": 480,
-            "parameterValues": {
-                "DE:Revenue Variance": 0,
-                "DE:Cost % Variance": 100,
-                "DE:Revenue % Variance": 0,
-                "DE:Profit": -400,
-                "DE:Work % Variance": 100,
-                "DE:Work Variance": 8,
-                "DE:Cost Variance": 400
-            }
-        },
-        {
-            "ID": "537f86ab00024539c58eb9b3fb2e82b1",
-            "name": "Subtask from atTask for Javier",
-            "objCode": "TASK",
-            "URL": null,
-            "actualCompletionDate": "2014-05-23T11:37:58:472-0600",
-            "actualCost": 0,
-            "actualDuration": 0,
-            "actualDurationMinutes": 0,
-            "actualExpenseCost": 0,
-            "actualLaborCost": 0,
-            "actualRevenue": 0,
-            "actualStartDate": "2014-05-23T11:37:58:472-0600",
-            "actualWork": 0,
-            "actualWorkRequired": 0,
-            "approvalEstStartDate": null,
-            "approvalPlannedStartDate": null,
-            "approvalProcessID": null,
-            "approvalProjectedStartDate": null,
-            "assignedToID": "f1da528fcd9f7471e0433365290aabff",
-            "auditTypes": [],
-            "billingAmount": 0,
-            "billingRecordID": null,
-            "categoryID": "5328c0af00076a1554c0aa69359ad3d7",
-            "commitDate": null,
-            "completionPendingDate": null,
-            "condition": 0,
-            "constraintDate": null,
-            "costAmount": 0,
-            "costType": "UHR",
-            "cpi": 1,
-            "csi": 1,
-            "currentApprovalStepID": null,
-            "customerID": "f1da528fcbbf7471e0433365290aabff",
-            "description": null,
-            "duration": 1,
-            "durationMinutes": 480,
-            "durationType": "A",
-            "durationUnit": "D",
-            "eac": 0,
-            "enteredByID": "f1da528fcd9f7471e0433365290aabff",
-            "entryDate": "2014-05-23T11:34:35:336-0600",
-            "estCompletionDate": "2014-05-23T11:37:58:472-0600",
-            "estStartDate": "2014-05-23T11:37:58:472-0600",
-            "extRefID": null,
-            "groupID": "f1da528fd2037471e0433365290aabff",
-            "handoffDate": "2014-04-23T09:00:00:000-0600",
-            "hasDocuments": false,
-            "hasExpenses": false,
-            "hasMessages": true,
-            "hasNotes": true,
-            "hasResolvables": false,
-            "hasTimedNotifications": false,
-            "indent": 1,
-            "isCritical": false,
-            "isLevelingExcluded": false,
-            "lastConditionNoteID": "537f86e30002454ceae2b5b4d0a7761a",
-            "lastNoteID": "537f86e30002454ceae2b5b4d0a7761a",
-            "lastUpdateDate": "2014-06-25T09:38:07:815-0600",
-            "lastUpdatedByID": "530701ff0000021a34838297a4a907a8",
-            "levelingStartDelay": 0,
-            "masterTaskID": null,
-            "milestoneID": null,
-            "numberOfChildren": 0,
-            "numberOpenOpTasks": 0,
-            "originalDuration": 0,
-            "originalWorkRequired": 0,
-            "parentID": "537f863f00024518ac68df912d06a4cf",
-            "parentLag": 0,
-            "parentLagType": "d",
-            "percentComplete": 100,
-            "personal": false,
-            "plannedCompletionDate": "2014-04-23T17:00:00:000-0600",
-            "plannedCost": 0,
-            "plannedDuration": 1,
-            "plannedDurationMinutes": 480,
-            "plannedExpenseCost": 0,
-            "plannedLaborCost": 0,
-            "plannedRevenue": 0,
-            "plannedStartDate": "2014-04-23T09:00:00:000-0600",
-            "previousStatus": "NEW",
-            "priority": 2,
-            "progressStatus": "LT",
-            "projectID": "535831160000b52c0f966af507148ee8",
-            "projectedCompletionDate": "2014-05-23T11:37:58:472-0600",
-            "projectedDurationMinutes": 0,
-            "projectedStartDate": "2014-05-23T11:37:58:472-0600",
-            "recurrenceNumber": null,
-            "recurrenceRuleID": null,
-            "referenceNumber": 9905,
-            "rejectionIssueID": null,
-            "remainingDurationMinutes": 0,
-            "reservedTimeID": null,
-            "resourceScope": "NONE",
-            "revenueType": "NOB",
-            "roleID": "f1da528fce267471e0433365290aabff",
-            "slackDate": "2014-11-04",
-            "spi": 1,
-            "status": "CPL",
-            "statusUpdate": "Comments in AtTask by Javier - if the baby is not here, John is not on the plane.",
-            "submittedByID": null,
-            "taskConstraint": "ASAP",
-            "taskNumber": 6,
-            "teamID": null,
-            "templateTaskID": null,
-            "trackingMode": "USER",
-            "wbs": "4.1",
-            "work": 0,
-            "workRequired": 0,
-            "parameterValues": {
-                "DE:JIRA Link": "https://outboxsystems.atlassian.net/browse/CBTP-23",
-                "DE:JIRA Issue Key": "CBTP-23"
-            }
-        },
-        {
-            "ID": "543ea0d300025fff851385aeba4ac484",
-            "name": "Software",
-            "objCode": "TASK",
-            "URL": null,
-            "actualCompletionDate": "2014-10-16T14:51:10:169-0600",
-            "actualCost": 250,
-            "actualDuration": 0,
-            "actualDurationMinutes": 0,
-            "actualExpenseCost": 250,
-            "actualLaborCost": 0,
-            "actualRevenue": 2000,
-            "actualStartDate": "2014-10-16T14:51:10:169-0600",
-            "actualWork": 0,
-            "actualWorkRequired": 0,
-            "approvalEstStartDate": null,
-            "approvalPlannedStartDate": null,
-            "approvalProcessID": null,
-            "approvalProjectedStartDate": null,
-            "assignedToID": null,
-            "auditTypes": [
-                "AA"
-            ],
-            "billingAmount": 2000,
-            "billingRecordID": "54403ea8000375a6da11ea7d7be03049",
-            "categoryID": null,
-            "commitDate": null,
-            "completionPendingDate": null,
-            "condition": null,
-            "constraintDate": null,
-            "costAmount": 0,
-            "costType": "UHR",
-            "cpi": 1,
-            "csi": 1,
-            "currentApprovalStepID": null,
-            "customerID": "f1da528fcbbf7471e0433365290aabff",
-            "description": "Software to be sold to Test Company 1.1.1",
-            "duration": 0,
-            "durationMinutes": 0,
-            "durationType": "W",
-            "durationUnit": "D",
-            "eac": 0,
-            "enteredByID": "f1da528fcbc67471e0433365290aabff",
-            "entryDate": "2014-10-15T10:29:07:090-0600",
-            "estCompletionDate": "2014-10-16T14:51:10:169-0600",
-            "estStartDate": "2014-10-16T14:51:10:169-0600",
-            "extRefID": "1",
-            "groupID": "f1da528fd9647471e0433365290aabff",
-            "handoffDate": "2014-10-15T09:00:00:000-0600",
-            "hasDocuments": false,
-            "hasExpenses": true,
-            "hasMessages": true,
-            "hasNotes": true,
-            "hasResolvables": false,
-            "hasTimedNotifications": false,
-            "indent": 0,
-            "isCritical": false,
-            "isLevelingExcluded": false,
-            "lastConditionNoteID": null,
-            "lastNoteID": "54402fbe00037228a7a4b0212e48c420",
-            "lastUpdateDate": "2014-10-22T16:51:02:271-0600",
-            "lastUpdatedByID": "f1da528fcbc67471e0433365290aabff",
-            "levelingStartDelay": 0,
-            "masterTaskID": null,
-            "milestoneID": null,
-            "numberOfChildren": 0,
-            "numberOpenOpTasks": 0,
-            "originalDuration": 0,
-            "originalWorkRequired": 0,
-            "parentID": null,
-            "parentLag": 0,
-            "parentLagType": "d",
-            "percentComplete": 100,
-            "personal": false,
-            "plannedCompletionDate": "2014-10-15T09:00:00:000-0600",
-            "plannedCost": 250,
-            "plannedDuration": 0,
-            "plannedDurationMinutes": 0,
-            "plannedExpenseCost": 250,
-            "plannedLaborCost": 0,
-            "plannedRevenue": 2000,
-            "plannedStartDate": "2014-10-15T09:00:00:000-0600",
-            "previousStatus": "NEW",
-            "priority": 0,
-            "progressStatus": "LT",
-            "projectID": "543ea0cf00025ffbfb736b7bf7960d2a",
-            "projectedCompletionDate": "2014-10-16T14:51:10:169-0600",
-            "projectedDurationMinutes": 0,
-            "projectedStartDate": "2014-10-16T14:51:10:169-0600",
-            "recurrenceNumber": null,
-            "recurrenceRuleID": null,
-            "referenceNumber": 60209,
-            "rejectionIssueID": null,
-            "remainingDurationMinutes": 0,
-            "reservedTimeID": null,
-            "resourceScope": "NONE",
-            "revenueType": "FRV",
-            "roleID": null,
-            "slackDate": "2015-01-17",
-            "spi": 1,
-            "status": "CPL",
-            "statusUpdate": null,
-            "submittedByID": null,
-            "taskConstraint": "ASAP",
-            "taskNumber": 1,
-            "teamID": null,
-            "templateTaskID": null,
-            "trackingMode": "USER",
-            "wbs": "1",
-            "work": 0,
-            "workRequired": 0,
-            "parameterValues": {}
-        }
-    ]
-}]]></string><![CDATA[
+            ]]><string><![CDATA[ATTasks]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[schemaTypeProperty]]></string><![CDATA[
             ]]><int><![CDATA[1]]></int><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
-            ]]><string><![CDATA[/Orchestrations/Main@[Read JSON]/{Json}]]></string><![CDATA[
+            ]]><string><![CDATA[jsonMessageProperty]]></string><![CDATA[
+            ]]><string/><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeConfig]]></string><![CDATA[
-            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[schemaNameProperty]]></string><![CDATA[
+            ]]><string><![CDATA[/XML Schemas/ATTasks/{AtTaskTasks}]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[jsonrootNodeArray]]></string><![CDATA[
             ]]><boolean><![CDATA[false]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
-            ]]><string/><![CDATA[
+            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
+            ]]><boolean><![CDATA[true]]></boolean><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoding]]></string><![CDATA[
             ]]><string><![CDATA[ISO-8859-1]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
-            ]]><string><![CDATA[xmlSchemaSelected]]></string><![CDATA[
-            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+            ]]><string><![CDATA[schemaGuidProperty]]></string><![CDATA[
+            ]]><string><![CDATA[appnet-guid://26597693FBE866242C84176DF6C89EECA88E1DF26EA8281DE59D335B64ADFA47]]></string><![CDATA[
           ]]></entry><![CDATA[
           ]]><entry><![CDATA[
             ]]><string><![CDATA[encoded]]></string><![CDATA[
@@ -1782,4 +1295,66 @@
     ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.task.ActivityRefTask/listeners/com.approuter.studio.connectors.task.MapTask[2]"/><![CDATA[
   ]]></tasks><![CDATA[
   ]]><valid><![CDATA[false]]></valid><![CDATA[
-]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></startScope></scope></sequence></process>
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></sequence></foreach><invoke activityId="251" activityName="" comments="" configurationId="http_sendreply_id" description="This activity sends a reply to the selected HTTP endpoint" expanded="true" moduleName="http://www.approuter.com/module/http/" name="Send Response" partnerLink=""><inputMapSpecConfig><mapSpec context="orchestration" optionalParameterVisible="true" version="1.0" xmlns="http://www.approuter.com/schemas/2003/1/transformation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><specInfo><source canBeSubstitutedFromUI="true" displayName="SomeResponse" isParameter="false" location="SomeResponse" locationType="2" logicalName="srcDoc1" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="SomeResponse" rootNodeName="SomeResponse" varName="SomeResponse"/><destination activityId="251" canBeSubstitutedFromUI="true" displayName="httpheaders" isParameter="true" location="http-reply-input-parameter-header.xsd-251" locationType="2" logicalName="dstDoc1" messageType="httpheaders" optionalParameter="true" originalRootNodeName="httpheaders" rootNodeName="httpheaders" varName="httpheaders"/><destination activityId="251" canBeSubstitutedFromUI="true" displayName="body" isParameter="true" location="http-reply-input-parameter-body-string.xsd-251" locationType="2" logicalName="dstDoc2" messageType="body" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="false" originalRootNodeName="body" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="body"/><destination activityId="251" canBeSubstitutedFromUI="true" displayName="responsecode" isParameter="true" location="http-reply-input-parameter-responsecode-int.xsd-251" locationType="2" logicalName="dstDoc3" messageType="responsecode" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="responsecode" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsecode"/><destination activityId="251" canBeSubstitutedFromUI="true" displayName="responsemessage" isParameter="true" location="http-reply-input-parameter-responsemessage-string.xsd-251" locationType="2" logicalName="dstDoc4" messageType="responsemessage" namespace="http://www.approuter.com/schemas/2003/1/castirontypes" optionalParameter="true" originalRootNodeName="responsemessage" originalRootNodeNameNS="http://www.approuter.com/schemas/2003/1/castirontypes" rootNodeName="responsemessage"/></specInfo><doMapping><rule emitCData="false" guaranteed="true"><do guaranteed="true"><from docName="srcDoc1" path="/SomeResponse"/><to docName="dstDoc2" path="/body"/></do></rule></doMapping></mapSpec></inputMapSpecConfig><tasksConfig><com.approuter.studio.connectors.task.TaskList><![CDATA[
+  ]]><tasks><![CDATA[
+    ]]><com.approuter.studio.connectors.http.tasks.HTTPSendReplyTask><![CDATA[
+      ]]><key><![CDATA[setupWorkflowTask]]></key><![CDATA[
+      ]]><children><![CDATA[
+        ]]><com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+          ]]><key><![CDATA[responseHeadersTask]]></key><![CDATA[
+          ]]><children/><![CDATA[
+          ]]><model><![CDATA[
+            ]]><map><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[selected]]></string><![CDATA[
+                ]]><string><![CDATA[false]]></string><![CDATA[
+              ]]></entry><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[isIncludeStandardHeaders]]></string><![CDATA[
+                ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+              ]]></entry><![CDATA[
+            ]]></map><![CDATA[
+          ]]></model><![CDATA[
+          ]]><listeners/><![CDATA[
+        ]]></com.approuter.studio.connectors.task.ActivityRefTask><![CDATA[
+      ]]></children><![CDATA[
+      ]]><model><![CDATA[
+        ]]><map><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[selected]]></string><![CDATA[
+            ]]><string><![CDATA[false]]></string><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[http_reply_actid]]></string><![CDATA[
+            ]]><int><![CDATA[-1]]></int><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[http_compresion]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+          ]]><entry><![CDATA[
+            ]]><string><![CDATA[http_reply_binary]]></string><![CDATA[
+            ]]><boolean><![CDATA[false]]></boolean><![CDATA[
+          ]]></entry><![CDATA[
+        ]]></map><![CDATA[
+      ]]></model><![CDATA[
+      ]]><listeners><![CDATA[
+        ]]><com.approuter.studio.connectors.task.MapTask><![CDATA[
+          ]]><key><![CDATA[mapInputsTask]]></key><![CDATA[
+          ]]><children/><![CDATA[
+          ]]><model><![CDATA[
+            ]]><map><![CDATA[
+              ]]><entry><![CDATA[
+                ]]><string><![CDATA[selected]]></string><![CDATA[
+                ]]><string><![CDATA[true]]></string><![CDATA[
+              ]]></entry><![CDATA[
+            ]]></map><![CDATA[
+          ]]></model><![CDATA[
+          ]]><listeners/><![CDATA[
+        ]]></com.approuter.studio.connectors.task.MapTask><![CDATA[
+      ]]></listeners><![CDATA[
+    ]]></com.approuter.studio.connectors.http.tasks.HTTPSendReplyTask><![CDATA[
+    ]]><com.approuter.studio.connectors.task.MapTask reference="../com.approuter.studio.connectors.http.tasks.HTTPSendReplyTask/listeners/com.approuter.studio.connectors.task.MapTask"/><![CDATA[
+  ]]></tasks><![CDATA[
+  ]]><valid><![CDATA[false]]></valid><![CDATA[
+]]></com.approuter.studio.connectors.task.TaskList></tasksConfig></invoke></sequence></process>
